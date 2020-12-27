@@ -1,6 +1,6 @@
 export default {
   widgets: [
-    { name: 'structure-menu' },
+    {name: 'structure-menu'},
     {
       name: 'project-info',
       options: {
@@ -14,13 +14,13 @@ export default {
                 {
                   buildHookId: '5fe87387d3fff98964fec252',
                   title: 'Sanity Studio',
-                  name: 'website-studio-wq6p4o9v',
+                  name: 'bishopstudio',
                   apiId: 'b2c28f4e-426f-45f8-b7d6-5607bf16c97c'
                 },
                 {
                   buildHookId: '5fe87387a33d908e47e21490',
-                  title: 'Blog Website',
-                  name: 'website-web-9pq8jmye',
+                  title: 'Gatsby Website',
+                  name: 'bishoptech',
                   apiId: '8925d01a-e8ce-419e-869e-2dd524c048f0'
                 }
               ]
@@ -33,15 +33,15 @@ export default {
             value: 'https://github.com/bishopTech/website',
             category: 'Code'
           },
-          { title: 'Frontend', value: 'https://website-web-9pq8jmye.netlify.app', category: 'apps' }
+          {title: 'Frontend', value: 'https://bishop.tech', category: 'apps'}
         ]
       }
     },
-    { name: 'project-users', layout: { height: 'auto' } },
+    {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'document-list',
-      options: { title: 'Recent blog posts', order: '_createdAt desc', types: ['post'] },
-      layout: { width: 'medium' }
+      options: {title: 'Recent blog posts', order: '_createdAt desc', types: ['post']},
+      layout: {width: 'medium'}
     }
   ]
 }
