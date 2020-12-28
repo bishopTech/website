@@ -2,6 +2,8 @@
 
 # TODO
 
+## Tinker Branch
+
 - [ ] Add static assets
   - [ ] favicon ico
   - [ ] favicon svg
@@ -11,7 +13,17 @@
 - [ ] Configure Layout
 - [ ] Correct SEO file
 - [ ] Install Tailwind CSS
+
+## Dev Branch
+
+- [ ] Set up layout for pages
 - [ ] Build out pages
+  - [ ] Home
+  - [ ] About
+  - [ ] Blog
+  - [ ] Post Page
+  - [ ] Resume
+- [ ] Design pages
   - [ ] Home
   - [ ] About
   - [ ] Blog
