@@ -5,11 +5,8 @@ import {
   filterOutDocsWithoutSlugs,
   filterOutDocsPublishedInTheFuture
 } from '../lib/helpers'
-import BlogPostPreviewList from '../components/blog-post-preview-list'
-import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
-import Layout from '../containers/layout'
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -69,9 +66,9 @@ const IndexPage = props => {
 
   if (errors) {
     return (
-      <Layout>
+      <div>
         <GraphQLErrorList errors={errors} />
-      </Layout>
+      </div>
     )
   }
 
@@ -82,6 +79,7 @@ const IndexPage = props => {
       .filter(filterOutDocsPublishedInTheFuture)
     : []
 
+  console.log(postNodes)
   if (!site) {
     throw new Error(
       'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
@@ -89,23 +87,16 @@ const IndexPage = props => {
   }
 
   return (
-    <Layout>
+    <div>
       <SEO
         title={site.title}
         description={site.description}
         keywords={site.keywords}
       />
-      <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
-        {postNodes && (
-          <BlogPostPreviewList
-            title='Latest blog posts'
-            nodes={postNodes}
-            browseMoreHref='/archive/'
-          />
-        )}
-      </Container>
-    </Layout>
+
+      <h1>Welcome to {site.title} - </h1>
+
+    </div>
   )
 }
 
