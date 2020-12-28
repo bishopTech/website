@@ -67,8 +67,8 @@ const BlogPostTemplate = props => {
           <GraphQLErrorList errors={errors} />
         </div>
       )}
-
-      {post }
+      <h1>{post.title}</h1>
+      {/* {post } */}
     </div>
   )
 }
