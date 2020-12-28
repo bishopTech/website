@@ -1,18 +1,19 @@
-# website-web
+# Gatsby Site
 
-## Content to Keep
+# TODO
 
-### Pages
-
-- blog.js
-- 404.js
-- index.js
-
-### Components
-- Blog post preview list
-- graphql-error-list
-- seo
-
-### Styles
-
-## Utils?
+- [ ] Add static assets
+  - [ ] favicon ico
+  - [ ] favicon svg
+  - [ ] logo file
+- [ ] Add Gatsby image and access to src/assets images
+- [ ] fix the loading pixelation on gatsby image
+- [ ] Configure Layout
+- [ ] Correct SEO file
+- [ ] Install Tailwind CSS
+- [ ] Build out pages
+  - [ ] Home
+  - [ ] About
+  - [ ] Blog
+  - [ ] Post Page
+  - [ ] Resume
