@@ -18,16 +18,26 @@ query {
       } 
     }
   }
+
+  image: file(relativePath: { eq: "images/bishopBG.png" }) {
+          childImageSharp {
+        # Specify the image processing specifications right in the query.
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+  }
 }
 `
 
-export default function index ({data: {post}}) {
-  console.log(post)
+export default function index ({data: {post, image}}) {
+  console.log(image)
   return (
     <div>
       <p>Testing Home Page</p>
       <div className='div'>
-        <Img fluid={post.mainImage.asset.fluid} />
+        <Img fluid={post.mainImage.asset.fluid} alt='testing out post image' />
+        <Img fluid={image.childImageSharp.fluid} alt='Bishop Tech BG' />
       </div>
     </div>
   )
