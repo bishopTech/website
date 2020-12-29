@@ -6,7 +6,7 @@
 
 - [ ] add code snippet to sanity post
 - [ ] configure preview
-- [ ] configure deploy changes
+- [x] configure deploy changes
 - [ ] alter package json
 
 ## Dev Branch
