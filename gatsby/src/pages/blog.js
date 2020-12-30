@@ -1,9 +1,10 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 import {
   mapEdgesToNodes,
   filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture
+  filterOutDocsPublishedInTheFuture,
+  getBlogUrl
 } from '../lib/helpers'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
@@ -96,6 +97,13 @@ const IndexPage = props => {
       />
 
       <h1>Welcome to {site.title} - </h1>
+      <br />
+      {postNodes.map((post) => (
+        <div className='p-4'>
+          <h1>{post.title}</h1>
+          <Link to={getBlogUrl(post.publishedAt, post.slug)}>Read More</Link>
+        </div>
+      ))}
 
     </Layout>
   )

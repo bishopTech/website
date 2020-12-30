@@ -3,6 +3,7 @@ import {graphql} from 'gatsby'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import {toPlainText} from '../lib/helpers'
+import Layout from '../components/layout/Layout'
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
@@ -58,7 +59,7 @@ const BlogPostTemplate = props => {
   const {data, errors} = props
   const post = data && data.post
   return (
-    <div>
+    <Layout>
       {errors && <SEO title='GraphQL Error' />}
       {post && <SEO title={post.title || 'Untitled'} description={toPlainText(post._rawExcerpt)} image={post.mainImage} />}
 
@@ -68,8 +69,7 @@ const BlogPostTemplate = props => {
         </div>
       )}
       <h1>{post.title}</h1>
-      {/* {post } */}
-    </div>
+    </Layout>
   )
 }
 
