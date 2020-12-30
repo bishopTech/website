@@ -7,13 +7,13 @@
 - [ ] Add static assets
   - [ ] favicon ico
   - [ ] favicon svg
-  - [ ] logo file
+  - [x] logo file
 - [x] Add Gatsby image and access to src/assets images
-- [ ] fix the loading pixelation on gatsby image
+- [x] fix the loading pixelation on gatsby image
 - [ ] Configure Layout
 - [ ] Correct SEO file
-- [ ] Install Tailwind CSS
-- [ ] update to most recent gatsby version
+- [x] Install Tailwind CSS
+- [x] update to most recent gatsby version
 
 ## Dev Branch
 

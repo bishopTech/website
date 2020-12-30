@@ -35,7 +35,7 @@ export default function index ({data: {post, image}}) {
   console.log(image)
   return (
     <div>
-      <p>Testing Home Page</p>
+      <p className='bg-blue-500 text-white'>Testing Home Page</p>
       <div className='div'>
         <Img fluid={post.mainImage.asset.fluid} alt='testing out post image' />
         <Img fluid={image.childImageSharp.fluid} alt='Bishop Tech BG' outerWrapperClassName='gatsby-image-wrapper' />
