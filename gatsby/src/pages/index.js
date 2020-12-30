@@ -3,6 +3,7 @@ import Img from 'gatsby-image'
 import {graphql} from 'gatsby'
 
 import '../styles/global.css'
+import Layout from '../components/layout/Layout'
 
 export const query = graphql`
 query {
@@ -34,12 +35,12 @@ query {
 export default function index ({data: {post, image}}) {
   console.log(image)
   return (
-    <div>
+    <Layout>
       <p className='bg-blue-500 text-white'>Testing Home Page</p>
       <div className='div'>
         <Img fluid={post.mainImage.asset.fluid} alt='testing out post image' />
         <Img fluid={image.childImageSharp.fluid} alt='Bishop Tech BG' outerWrapperClassName='gatsby-image-wrapper' />
       </div>
-    </div>
+    </Layout>
   )
 }

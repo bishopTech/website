@@ -24,9 +24,13 @@
   - [ ] Blog
   - [ ] Post Page
   - [ ] Resume
+  - [ ] Hire
+  - [ ] Links
 - [ ] Design pages
   - [ ] Home
   - [ ] About
   - [ ] Blog
   - [ ] Post Page
   - [ ] Resume
+  - [ ] Hire
+  - [ ] Links

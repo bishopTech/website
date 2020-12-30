@@ -1,13 +1,12 @@
 # Sanity Website
 
-# Todo
+# TODO
 
 ## Tinker Branch
 
 - [ ] add code snippet to sanity post
 - [ ] configure preview
 - [ ] Remove author
-- [ ] set up series
 - [ ] unsplash plugin?
 - [ ] google analytics?
 - [ ] seo tools plugin
@@ -17,3 +16,5 @@
 ## Dev Branch
 
 - [ ] Brand Sanity
+- [ ] set up series
+- [ ] set up links page data

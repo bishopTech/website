@@ -7,6 +7,7 @@ import {
 } from '../lib/helpers'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
+import Layout from '../components/layout/Layout'
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -66,9 +67,9 @@ const IndexPage = props => {
 
   if (errors) {
     return (
-      <div>
+      <Layout>
         <GraphQLErrorList errors={errors} />
-      </div>
+      </Layout>
     )
   }
 
@@ -87,7 +88,7 @@ const IndexPage = props => {
   }
 
   return (
-    <div>
+    <Layout>
       <SEO
         title={site.title}
         description={site.description}
@@ -96,7 +97,7 @@ const IndexPage = props => {
 
       <h1>Welcome to {site.title} - </h1>
 
-    </div>
+    </Layout>
   )
 }
 
