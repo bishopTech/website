@@ -15,6 +15,8 @@
 - [x] Install Tailwind CSS
 - [x] update to most recent gatsby version
 - [ ] add fontawesome
+- [ ] import source code pro font
+- [ ] import dank mono font
 
 ## Dev Branch
 

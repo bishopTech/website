@@ -6,7 +6,11 @@ export default function Layout ({children}) {
     <>
       <Nav />
       {/* Where the pages are displayed */}
-      {children}
+      <div className='py-20 min-h-screen bg-gray-900 text-blue-50'>
+        <div className='container mx-auto'>
+          {children}
+        </div>
+      </div>
       <Footer />
     </>
   )
