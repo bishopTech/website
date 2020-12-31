@@ -14,6 +14,7 @@
 - [ ] Correct SEO file
 - [x] Install Tailwind CSS
 - [x] update to most recent gatsby version
+- [ ] add fontawesome
 
 ## Dev Branch
 
