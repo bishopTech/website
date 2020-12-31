@@ -1,7 +1,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import GraphQLErrorList from '../components/graphql-error-list'
-import SEO from '../components/seo'
+import GraphQLErrorList from '../components/sanity/graphql-error-list'
+import SEO from '../components/sanity/seo'
 import {toPlainText} from '../lib/helpers'
 import Layout from '../components/layout/Layout'
 

@@ -18,6 +18,9 @@
 ## Dev Branch
 
 - [ ] Set up layout for pages
+  - [ ] Nav
+  - [ ] Footer
+  - [ ] Newsletter
 - [ ] Build out pages
   - [ ] Home
   - [ ] About
