@@ -1,14 +1,14 @@
 import React from 'react'
-import {graphql, Link} from 'gatsby'
+import {graphql} from 'gatsby'
 import {
   mapEdgesToNodes,
   filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture,
-  getBlogUrl
+  filterOutDocsPublishedInTheFuture
 } from '../lib/helpers'
 import GraphQLErrorList from '../components/sanity/graphql-error-list'
 import SEO from '../components/sanity/seo'
 import Layout from '../components/layout/Layout'
+import BlogList from '../components/blog/BlogList'
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -49,8 +49,15 @@ export const query = graphql`
           id
           publishedAt
           mainImage {
-            ...SanityImage
+            _key
+            _type
+            caption
             alt
+            asset {
+              fluid(maxWidth: 800) {
+                ...GatsbySanityImageFluid
+              }
+            } 
           }
           title
           _rawExcerpt
@@ -81,7 +88,7 @@ const IndexPage = props => {
       .filter(filterOutDocsPublishedInTheFuture)
     : []
 
-  console.log(postNodes)
+  // console.log(postNodes)
   if (!site) {
     throw new Error(
       'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
@@ -98,12 +105,8 @@ const IndexPage = props => {
 
       <h1>Welcome to {site.title} - </h1>
       <br />
-      {postNodes.map((post) => (
-        <div className='p-4'>
-          <h1>{post.title}</h1>
-          <Link to={getBlogUrl(post.publishedAt, post.slug)}>Read More</Link>
-        </div>
-      ))}
+
+      <BlogList posts={postNodes} />
 
     </Layout>
   )
