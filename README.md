@@ -10,9 +10,10 @@
   - [ ] Links
   - [ ] Resume
 - [ ] Design Pages
+  - [ ] Nav
   - [ ] Home
   - [ ] About
-  - [ ] Blog
+  - [ ] Blog (Raw Block)
 
 ## TODO
 

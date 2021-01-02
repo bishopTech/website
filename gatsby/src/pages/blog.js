@@ -102,9 +102,9 @@ const IndexPage = props => {
         description={site.description}
         keywords={site.keywords}
       />
-
-      <h1>Welcome to {site.title} - </h1>
-      <br />
+      <div className='flex items-center justify-center mb-5'>
+        <h1 className='text-2xl font-bold text-white'>Blog</h1>
+      </div>
 
       <BlogList posts={postNodes} />
 
