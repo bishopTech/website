@@ -22,7 +22,7 @@ query {
     }
   }
 
-  image: file(relativePath: { eq: "images/bishopTechbg3.png" }) {
+  image: file(relativePath: { eq: "images/bishopTechLogoIcon.png" }) {
           childImageSharp {
         # Specify the image processing specifications right in the query.
         fluid {
@@ -36,10 +36,17 @@ query {
 export default function index ({data: {post, image}}) {
   console.log(image)
   return (
-    <div>
+    <div className='text-white'>
       <div className='min-h-full hero'>
         <Nav />
-        <button>test</button>
+        <div className='container items-center justify-center md:space-x-6'>
+          <Img fluid={image.childImageSharp.fluid} alt='Pixelated logo - Bishop tech Logo' className='w-1/2 md:w-1/4' />
+          <div>
+            <h1 className='text-4xl font-bold'>Welcome to Bishop Tech!</h1>
+            <h2 className='text-2xl font-semibold'>My name is Chris Bishop</h2>
+            <p className=''>Making a tech more accessible for everyone!</p>
+          </div>
+        </div>
       </div>
       <div className='container py-5 mx-auto'>
         <p>test</p>
