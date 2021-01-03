@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Source Code Pro", monospace;
+}
+
 .gatsby-image-wrapper img[src*="base64,"] {
   image-rendering: -moz-crisp-edges;
   image-rendering: pixelated;
@@ -9,4 +13,11 @@
 
 .div {
   width: 500px;
+}
+
+.hero {
+  background: url("../assets/images/bishopTechbg3.png") center bottom/cover no-repeat;
+  height: 100vh;
+  width: 100%;
+  object-fit: contain;
 }

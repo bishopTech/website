@@ -4,6 +4,7 @@ import {graphql} from 'gatsby'
 
 import '../styles/global.css'
 import Layout from '../components/layout/Layout'
+import Nav from '../components/layout/Nav'
 
 export const query = graphql`
 query {
@@ -21,7 +22,7 @@ query {
     }
   }
 
-  image: file(relativePath: { eq: "images/bishopBG.png" }) {
+  image: file(relativePath: { eq: "images/bishopTechbg3.png" }) {
           childImageSharp {
         # Specify the image processing specifications right in the query.
         fluid {
@@ -35,12 +36,19 @@ query {
 export default function index ({data: {post, image}}) {
   console.log(image)
   return (
-    <Layout>
-      <p className='bg-blue-500 text-white'>Testing Home Page</p>
+    <div>
+      <div className='min-h-full hero'>
+        <Nav />
+        <button>test</button>
+      </div>
+      <div className='container py-5 mx-auto'>
+        <p>test</p>
+      </div>
+      <p className='text-white bg-blue-500'>Testing Home Page</p>
       <div className='div'>
         <Img fluid={post.mainImage.asset.fluid} alt='testing out post image' />
         <Img fluid={image.childImageSharp.fluid} alt='Bishop Tech BG' outerWrapperClassName='gatsby-image-wrapper' />
       </div>
-    </Layout>
+    </div>
   )
 }

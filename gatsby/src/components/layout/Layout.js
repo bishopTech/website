@@ -7,7 +7,7 @@ export default function Layout ({children}) {
       <Nav />
       {/* Where the pages are displayed */}
       <div className='min-h-screen bg-gray-900 text-blue-50'>
-        <div className='container py-5 mx-auto'>
+        <div className=''>
           {children}
         </div>
       </div>
