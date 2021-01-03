@@ -1,7 +1,13 @@
 import {Link} from 'gatsby'
 import React from 'react'
 
-export default function Nav () {
+export default function Nav ({transparent}) {
+  if (transparent) {
+    console.log(transparent)
+  } else {
+    console.log('Not transparent!!!')
+  }
+
   return (
     <nav className='flex justify-between p-10 text-white bg-blue-900 '>
       <Link
@@ -29,7 +35,7 @@ export default function Nav () {
       </Link>
       <Link
         to='/hire'
-        className='transition duration-75 transform hover:rotate-6 hover:scale-105'
+        className='px-8 text-gray-900 transition duration-75 transform bg-white rounded-full hover:rotate-6 hover:scale-105'
       >
         Hire Me
       </Link>

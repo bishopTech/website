@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dark Blue BG: #151A26 */
+/* Primary Dark Blue: #202B45 */
+/* Secondary Dark Blue: #39496A */
+/* Light Blue: #A4C9EE */
+/* White: #F0F7FE */
+
 body {
   font-family: "Source Code Pro", monospace;
 }
@@ -16,7 +22,7 @@ body {
 }
 
 .hero {
-  background: url("../assets/images/bishopTechbg3.png") center bottom/cover no-repeat;
+  background: url("../assets/images/bishopTechbg1080.png") center bottom/cover no-repeat;
   height: 100vh;
   width: 100%;
   object-fit: contain;
