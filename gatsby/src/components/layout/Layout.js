@@ -6,7 +6,7 @@ export default function Layout ({children}) {
     <>
       <Nav />
       {/* Where the pages are displayed */}
-      <div className='min-h-screen bg-gray-900 text-blue-50'>
+      <div className='min-h-screen bg-darkest-blue text-blue-50'>
         <div className=''>
           {children}
         </div>

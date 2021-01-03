@@ -9,7 +9,7 @@ export default function Nav ({transparent}) {
   }
 
   return (
-    <nav className='flex justify-between p-10 text-white bg-transparent '>
+    <nav className={`flex justify-between p-10 text-white ${transparent ? 'bg-transparent' : 'bg-darkest-blue border-b-2 border-dark-blue'} `}>
       <Link
         to='/'
         className='text-blue-50 animate-bounce'
@@ -39,6 +39,5 @@ export default function Nav ({transparent}) {
       >
         Hire Me
       </Link>
-    </nav>
-  )
+    </nav>)
 }
