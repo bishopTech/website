@@ -32,8 +32,8 @@ export default function index ({data: {post, image}}) {
             <h2 className='text-2xl font-light'>Created by Chris Bishop</h2>
             <p className='mt-4 text-lg'>This site has a mission to help make learning tech accessible for everyone!</p>
             <div className='mt-8 space-x-3'>
-              <Link to='/about' className='px-8 py-3 text-white duration-300 border-2 border-white rounded-xl hover:bg-white hover:text-blue-900'>Learn More</Link>
-              <Link to='/blog' className='px-8 py-3 text-white duration-300 border-2 border-white rounded-xl hover:bg-white hover:text-blue-900'>Read Articles</Link>
+              <Link to='/about' className='px-8 py-3 font-semibold duration-300 border-2 border-white bg-darkest-blue text-off-white rounded-xl hover:bg-white hover:text-darkest-blue'>Learn More</Link>
+              <Link to='/blog' className='px-8 py-3 font-semibold duration-300 border-2 border-white hover:border-off-white bg-darkest-blue text-off-white rounded-xl hover:bg-light-blue hover:text-darkest-blue'>Read Articles</Link>
             </div>
           </div>
         </div>

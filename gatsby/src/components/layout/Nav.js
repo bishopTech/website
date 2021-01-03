@@ -9,7 +9,7 @@ export default function Nav ({transparent}) {
   }
 
   return (
-    <nav className='flex justify-between p-10 text-white bg-blue-900 '>
+    <nav className='flex justify-between p-10 text-white bg-transparent '>
       <Link
         to='/'
         className='text-blue-50 animate-bounce'
