@@ -2,7 +2,8 @@ import {Link, StaticQuery, graphql} from 'gatsby'
 import React from 'react'
 // import Img from 'gatsby-image'
 
-// Create a static query
+
+// Create a static query for image 
 // export default function NavImage(props) {
 //   return (
 //     <StaticQuery
