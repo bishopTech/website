@@ -1,20 +1,30 @@
-import {Link} from 'gatsby'
+import {Link, StaticQuery, graphql} from 'gatsby'
 import React from 'react'
+// import Img from 'gatsby-image'
 
-export default function Nav ({transparent}) {
+// Create a static query
+// export default function NavImage(props) {
+//   return (
+//     <StaticQuery
+//   )
+// }
+
+export default function Nav ({transparent}, data) {
   if (transparent) {
     console.log(transparent)
   } else {
     console.log('Not transparent!!!')
   }
 
+  console.log('Data:', data)
+
   return (
     <nav className={`flex justify-between p-10 text-white ${transparent ? 'bg-transparent' : 'bg-darkest-blue border-b-2 border-dark-blue'} `}>
       <Link
         to='/'
-        className='text-blue-50 animate-bounce'
+        className='text-blue-50'
       >
-        Home
+        {/* <Img fluid='' /> */}
       </Link>
       <Link
         to='/about'
