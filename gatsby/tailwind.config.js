@@ -16,7 +16,7 @@ module.exports = {
   variants: {
     extend: {}
   },
-  plugins: []
+  plugins: [require('@tailwindcss/typography')]
 }
 
 /* Dark Blue BG: #151A26 or #0A1321 */

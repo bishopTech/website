@@ -4,6 +4,7 @@ import GraphQLErrorList from '../components/sanity/graphql-error-list'
 import SEO from '../components/sanity/seo'
 import {toPlainText} from '../lib/helpers'
 import Layout from '../components/layout/Layout'
+import PortableText from '../components/sanity/portableText'
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
@@ -69,6 +70,10 @@ const BlogPostTemplate = props => {
         </div>
       )}
       <h1>{post.title}</h1>
+      <div className='prose lg:prose-xl mx-atuo'>
+        <PortableText blocks={post._rawBody} />
+      </div>
+
     </Layout>
   )
 }
