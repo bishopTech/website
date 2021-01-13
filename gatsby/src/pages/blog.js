@@ -8,7 +8,7 @@ import {
 import GraphQLErrorList from '../components/sanity/graphql-error-list'
 import SEO from '../components/sanity/seo'
 import Layout from '../components/layout/Layout'
-import BlogList from '../components/blog/BlogList'
+import BlogCard from '../components/blog/BlogCard'
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -102,11 +102,26 @@ const IndexPage = props => {
         description={site.description}
         keywords={site.keywords}
       />
-      <div className='flex items-center justify-center mb-5'>
-        <h1 className='text-2xl font-bold text-white'>Blog</h1>
+      <div className='relative px-4 pt-16 pb-20 bg-gray-50 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
+        <div className='absolute inset-0'>
+          <div className='bg-white h-1/3 sm:h-2/3' />
+        </div>
+        <div className='relative mx-auto max-w-7xl'>
+          <div className='text-center'>
+            <h2 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+              Blog
+            </h2>
+            <p className='max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4'>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
+            </p>
+          </div>
+          <div className='grid max-w-lg gap-5 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none'>
+            {postNodes.map((post) => (
+              <BlogCard key={post.id} post={post} />
+            ))}
+          </div>
+        </div>
       </div>
-
-      <BlogList posts={postNodes} />
 
     </Layout>
   )
