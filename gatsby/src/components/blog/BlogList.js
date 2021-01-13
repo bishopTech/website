@@ -8,7 +8,7 @@ export default function BlogList ({posts}) {
       {posts.map((post) => (
         <BlogCard key={post.id} post={post} />
       ))}
+      <li className='test' />
     </div>
   )
 }
-
