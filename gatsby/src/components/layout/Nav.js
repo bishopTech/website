@@ -31,7 +31,8 @@ export default function Nav ({transparent}) {
         to='/'
         className='object-cover h-full'
       >
-        <Img fluid={image.file.childImageSharp.fluid} alt='Full Bishop Tech logo' className='' />
+        {/* <Img fluid={image.file.childImageSharp.fluid} alt='Full Bishop Tech logo' className='' /> */}
+        Home
       </Link>
       <Link
         to='/about'
