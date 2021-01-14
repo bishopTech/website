@@ -2,6 +2,22 @@
 
 # TODO
 
+## Dev Branch
+
+### GO LIVE GOALS
+
+- [ ] Home Page
+  - [ ] Hero Section (Why should people care)
+  - [ ] Proof (Who am I and what i've done)
+  - [ ] Logo Cloud (technologies you'll learn)
+  - [ ] Featured Posts
+  - [ ] Have any questions?
+  - [ ] Footer
+- [ ] Nav
+- [ ] About Page
+- [ ] Blog Cards + Pagination
+- [ ] Blog Post Page
+
 ## Tinker Branch
 
 - [ ] Add static assets
@@ -16,27 +32,13 @@
 - [x] update to most recent gatsby version
 - [ ] add fontawesome
 - [ ] import source code pro font
-- [ ] import dank mono font
+- [ ] import dank mono font (in the font zip)
+- [ ] reading progress
+- [ ] Disqus
 
-## Dev Branch
 
-- [ ] Set up layout for pages
-  - [ ] Nav
-  - [ ] Footer
-  - [ ] Newsletter
-- [ ] Build out pages
-  - [ ] Home
-  - [ ] About
-  - [ ] Blog
-  - [ ] Post Page
-  - [ ] Resume
-  - [ ] Hire
-  - [ ] Links
-- [ ] Design pages
-  - [ ] Home
-  - [ ] About
-  - [ ] Blog
-  - [ ] Post Page
-  - [ ] Resume
-  - [ ] Hire
-  - [ ] Links
+## Future
+
+- [ ] Testimonials
+- [ ] Resume
+- [ ] Hire Me
