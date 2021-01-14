@@ -57,12 +57,16 @@ export const query = graphql`
               fluid(maxWidth: 800) {
                 ...GatsbySanityImageFluid
               }
-            } 
+            }
           }
           title
           _rawExcerpt
           slug {
             current
+          }
+          categories {
+            title
+            id
           }
         }
       }
@@ -109,7 +113,7 @@ const IndexPage = props => {
         <div className='relative mx-auto max-w-7xl'>
           <div className='text-center'>
             <h2 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
-              Blog
+              Welcome to the Bishop Tech Blog
             </h2>
             <p className='max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4'>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.

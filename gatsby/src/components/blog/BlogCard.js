@@ -4,8 +4,8 @@ import {getBlogUrl} from '../../lib/helpers'
 import Img from 'gatsby-image'
 
 export default function BlogCard ({post}) {
-  const {excerpt, authors, categories, title, mainImage, publishedAt, slug} = post
-  console.log('excerpt: ', excerpt)
+  const {_rawExcerpt, authors, categories, title, mainImage, publishedAt, slug} = post
+  console.log('exceprt ', _rawExcerpt)
   console.log('props: ', post)
   return (
     <>
@@ -19,7 +19,7 @@ export default function BlogCard ({post}) {
           <div className='flex-1'>
             <p className='text-sm font-medium text-blue-600'>
               <a href='#' className='hover:underline'>
-                TAGS
+                {categories.map(category => category.title).join(', ').toUpperCase()}
               </a>
             </p>
             <Link to={getBlogUrl(publishedAt, slug)} className='block mt-2'>
@@ -27,7 +27,7 @@ export default function BlogCard ({post}) {
                 {title}
               </h3>
               <p className='mt-3 text-base text-gray-500'>
-                {excerpt || 'Excerpt here!'}
+                {/* {excerpt || 'Excerpt here!'} */}
               </p>
             </Link>
           </div>

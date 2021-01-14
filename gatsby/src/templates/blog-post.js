@@ -5,7 +5,6 @@ import SEO from '../components/sanity/seo'
 import {toPlainText} from '../lib/helpers'
 import PortableText from '../components/sanity/portableText'
 import Img from 'gatsby-image'
-import Nav from '../components/layout/Nav'
 import Layout from '../components/layout/Layout'
 
 export const query = graphql`
@@ -29,6 +28,10 @@ export const query = graphql`
         } 
       }
       title
+      categories {
+        title
+        id
+      }
       slug {
         current
       }
