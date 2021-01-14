@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 
 export default function BlogCard ({post}) {
   const {_rawExcerpt, authors, categories, title, mainImage, publishedAt, slug} = post
-  console.log('exceprt ', _rawExcerpt)
+  console.log('excerpt ', _rawExcerpt)
   console.log('props: ', post)
   return (
     <>
