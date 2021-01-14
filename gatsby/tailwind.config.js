@@ -11,17 +11,17 @@ module.exports = {
         'off-white': '#F0F7FE'
       },
       typography: {
-        DEFAULT: {
-          css: {
-            color: '#ffffff',
-            a: {
-              color: '#3182ce',
-              '&:hover': {
-                color: '#2c5282'
-              }
-            }
-          }
-        }
+        // DEFAULT: {
+        //   css: {
+        //     color: '#ffffff',
+        //     a: {
+        //       color: '#3182ce',
+        //       '&:hover': {
+        //         color: '#2c5282'
+        //       }
+        //     }
+        //   }
+        // }
       }
     }
 
