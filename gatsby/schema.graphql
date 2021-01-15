@@ -557,12 +557,12 @@ type Query {
   sanityCategory(_createdAt: DateQueryOperatorInput, _id: StringQueryOperatorInput, _key: StringQueryOperatorInput, _rev: StringQueryOperatorInput, _type: StringQueryOperatorInput, _updatedAt: DateQueryOperatorInput, children: NodeFilterListInput, description: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, title: StringQueryOperatorInput): SanityCategory
   sanityFileAsset(_createdAt: DateQueryOperatorInput, _id: StringQueryOperatorInput, _key: StringQueryOperatorInput, _rawSource: JSONQueryOperatorInput, _rev: StringQueryOperatorInput, _type: StringQueryOperatorInput, _updatedAt: DateQueryOperatorInput, assetId: StringQueryOperatorInput, children: NodeFilterListInput, description: StringQueryOperatorInput, extension: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, label: StringQueryOperatorInput, mimeType: StringQueryOperatorInput, originalFilename: StringQueryOperatorInput, parent: NodeFilterInput, path: StringQueryOperatorInput, sha1hash: StringQueryOperatorInput, size: FloatQueryOperatorInput, source: SanityAssetSourceDataFilterInput, title: StringQueryOperatorInput, url: StringQueryOperatorInput): SanityFileAsset
   sanityImageAsset(_createdAt: DateQueryOperatorInput, _id: StringQueryOperatorInput, _key: StringQueryOperatorInput, _rawMetadata: JSONQueryOperatorInput, _rawSource: JSONQueryOperatorInput, _rev: StringQueryOperatorInput, _type: StringQueryOperatorInput, _updatedAt: DateQueryOperatorInput, assetId: StringQueryOperatorInput, children: NodeFilterListInput, description: StringQueryOperatorInput, extension: StringQueryOperatorInput, fixed: SanityImageFixedFilterInput, fluid: SanityImageFluidFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, label: StringQueryOperatorInput, metadata: SanityImageMetadataFilterInput, mimeType: StringQueryOperatorInput, originalFilename: StringQueryOperatorInput, parent: NodeFilterInput, path: StringQueryOperatorInput, sha1hash: StringQueryOperatorInput, size: FloatQueryOperatorInput, source: SanityAssetSourceDataFilterInput, title: StringQueryOperatorInput, url: StringQueryOperatorInput): SanityImageAsset
-  sanityPost(_createdAt: DateQueryOperatorInput, _id: StringQueryOperatorInput, _key: StringQueryOperatorInput, _rawAuthors: JSONQueryOperatorInput, _rawBody: JSONQueryOperatorInput, _rawCategories: JSONQueryOperatorInput, _rawExcerpt: JSONQueryOperatorInput, _rawMainImage: JSONQueryOperatorInput, _rawSlug: JSONQueryOperatorInput, _rev: StringQueryOperatorInput, _type: StringQueryOperatorInput, _updatedAt: DateQueryOperatorInput, authors: SanityAuthorReferenceFilterListInput, body: SanityBlockFilterListInput, categories: SanityCategoryFilterListInput, children: NodeFilterListInput, excerpt: SanityBlockFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, mainImage: SanityMainImageFilterInput, parent: NodeFilterInput, publishedAt: DateQueryOperatorInput, slug: SanitySlugFilterInput, title: StringQueryOperatorInput): SanityPost
+  sanityPost(_createdAt: DateQueryOperatorInput, _id: StringQueryOperatorInput, _key: StringQueryOperatorInput, _rawBody: JSONQueryOperatorInput, _rawCategories: JSONQueryOperatorInput, _rawMainImage: JSONQueryOperatorInput, _rawSlug: JSONQueryOperatorInput, _rev: StringQueryOperatorInput, _type: StringQueryOperatorInput, _updatedAt: DateQueryOperatorInput, body: SanityBlockFilterListInput, categories: SanityCategoryFilterListInput, children: NodeFilterListInput, excerpt: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, mainImage: SanityMainImageFilterInput, parent: NodeFilterInput, publishedAt: DateQueryOperatorInput, slug: SanitySlugFilterInput, title: StringQueryOperatorInput): SanityPost
   sanitySiteSettings(_createdAt: DateQueryOperatorInput, _id: StringQueryOperatorInput, _key: StringQueryOperatorInput, _rawAuthor: JSONQueryOperatorInput, _rev: StringQueryOperatorInput, _type: StringQueryOperatorInput, _updatedAt: DateQueryOperatorInput, author: SanityAuthorFilterInput, children: NodeFilterListInput, description: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, keywords: StringQueryOperatorInput, parent: NodeFilterInput, title: StringQueryOperatorInput): SanitySiteSettings
   site(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, host: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, port: IntQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput): Site
   siteBuildMetadata(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput): SiteBuildMetadata
   sitePage(children: NodeFilterListInput, component: StringQueryOperatorInput, componentChunkName: StringQueryOperatorInput, componentPath: StringQueryOperatorInput, context: SitePageContextFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, internalComponentName: StringQueryOperatorInput, isCreatedByStatefulCreatePages: BooleanQueryOperatorInput, matchPath: StringQueryOperatorInput, parent: NodeFilterInput, path: StringQueryOperatorInput, pluginCreator: SitePluginFilterInput, pluginCreatorId: StringQueryOperatorInput): SitePage
-  sitePlugin(children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, name: StringQueryOperatorInput, nodeAPIs: StringQueryOperatorInput, packageJson: SitePluginPackageJsonFilterInput, parent: NodeFilterInput, pluginFilepath: StringQueryOperatorInput, pluginOptions: SitePluginPluginOptionsFilterInput, resolve: StringQueryOperatorInput, ssrAPIs: StringQueryOperatorInput, version: StringQueryOperatorInput): SitePlugin
+  sitePlugin(browserAPIs: StringQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, name: StringQueryOperatorInput, nodeAPIs: StringQueryOperatorInput, packageJson: SitePluginPackageJsonFilterInput, parent: NodeFilterInput, pluginFilepath: StringQueryOperatorInput, pluginOptions: SitePluginPluginOptionsFilterInput, resolve: StringQueryOperatorInput, ssrAPIs: StringQueryOperatorInput, version: StringQueryOperatorInput): SitePlugin
 }
 
 type SanityAssetSourceData {
@@ -970,10 +970,8 @@ type SanityPost implements Node & SanityDocument {
   ): Date
   _id: String
   _key: String
-  _rawAuthors(resolveReferences: SanityResolveReferencesConfiguration): JSON
   _rawBody(resolveReferences: SanityResolveReferencesConfiguration): JSON
   _rawCategories(resolveReferences: SanityResolveReferencesConfiguration): JSON
-  _rawExcerpt(resolveReferences: SanityResolveReferencesConfiguration): JSON
   _rawMainImage(resolveReferences: SanityResolveReferencesConfiguration): JSON
   _rawSlug(resolveReferences: SanityResolveReferencesConfiguration): JSON
   _rev: String
@@ -988,11 +986,10 @@ type SanityPost implements Node & SanityDocument {
     "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date
-  authors: [SanityAuthorReference]
   body: [SanityBlock]
   categories: [SanityCategory]
   children: [Node!]!
-  excerpt: [SanityBlock]
+  excerpt: String
   id: ID!
   internal: Internal!
   mainImage: SanityMainImage
@@ -1241,6 +1238,7 @@ type SitePageGroupConnection {
 }
 
 type SitePlugin implements Node {
+  browserAPIs: [String]
   children: [Node!]!
   id: ID!
   internal: Internal!
@@ -1321,6 +1319,7 @@ type SitePluginPluginOptions {
   path: String
   pathCheck: Boolean
   projectId: String
+  specialChars: String
   stripMetadata: Boolean
   token: String
   watchMode: Boolean
@@ -2456,55 +2455,13 @@ enum SanityPostFieldsEnum {
   _createdAt
   _id
   _key
-  _rawAuthors @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   _rawBody @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   _rawCategories @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  _rawExcerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   _rawMainImage @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   _rawSlug @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   _rev
   _type
   _updatedAt
-  authors
-  authors____key
-  authors____type
-  authors___author____createdAt
-  authors___author____id
-  authors___author____key
-  authors___author____rawBio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author____rawImage @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author____rawSlug @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author____rev
-  authors___author____type
-  authors___author____updatedAt
-  authors___author___bio
-  authors___author___bio____key
-  authors___author___bio____type
-  authors___author___bio___list
-  authors___author___bio___sanityChildren
-  authors___author___bio___style
-  authors___author___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author___children___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author___children___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author___image____key
-  authors___author___image____type
-  authors___author___image___alt
-  authors___author___image___caption
-  authors___author___internal___content @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author___internal___contentDigest @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author___internal___description @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author___internal___fieldOwners @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author___internal___ignoreType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author___internal___mediaType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author___internal___owner @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author___internal___type @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author___name
-  authors___author___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-  authors___author___slug____key
-  authors___author___slug____type
-  authors___author___slug___current
   body
   body____key
   body____type
@@ -2602,15 +2559,6 @@ enum SanityPostFieldsEnum {
   children___parent___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   children___parent___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   excerpt
-  excerpt____key
-  excerpt____type
-  excerpt___list
-  excerpt___sanityChildren
-  excerpt___sanityChildren____key
-  excerpt___sanityChildren____type
-  excerpt___sanityChildren___marks
-  excerpt___sanityChildren___text
-  excerpt___style
   id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   internal___content @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   internal___contentDigest @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -3218,6 +3166,7 @@ enum SitePageFieldsEnum {
   parent___parent___parent___id
   path
   pluginCreatorId
+  pluginCreator___browserAPIs
   pluginCreator___children
   pluginCreator___children___children
   pluginCreator___children___children___children
@@ -3288,6 +3237,7 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___path
   pluginCreator___pluginOptions___pathCheck
   pluginCreator___pluginOptions___projectId
+  pluginCreator___pluginOptions___specialChars
   pluginCreator___pluginOptions___stripMetadata
   pluginCreator___pluginOptions___token
   pluginCreator___pluginOptions___watchMode
@@ -3297,6 +3247,7 @@ enum SitePageFieldsEnum {
 }
 
 enum SitePluginFieldsEnum {
+  browserAPIs
   children
   children___children
   children___children___children
@@ -3415,6 +3366,7 @@ enum SitePluginFieldsEnum {
   pluginOptions___path
   pluginOptions___pathCheck
   pluginOptions___projectId
+  pluginOptions___specialChars
   pluginOptions___stripMetadata
   pluginOptions___token
   pluginOptions___watchMode
@@ -3744,16 +3696,6 @@ input SanityAuthorFilterInput {
   slug: SanitySlugFilterInput
 }
 
-input SanityAuthorReferenceFilterInput {
-  _key: StringQueryOperatorInput
-  _type: StringQueryOperatorInput
-  author: SanityAuthorFilterInput
-}
-
-input SanityAuthorReferenceFilterListInput {
-  elemMatch: SanityAuthorReferenceFilterInput
-}
-
 input SanityAuthorSortInput {
   fields: [SanityAuthorFieldsEnum]
   order: [SortOrderEnum] = [ASC]
@@ -3962,20 +3904,17 @@ input SanityPostFilterInput {
   _createdAt: DateQueryOperatorInput
   _id: StringQueryOperatorInput
   _key: StringQueryOperatorInput
-  _rawAuthors: JSONQueryOperatorInput
   _rawBody: JSONQueryOperatorInput
   _rawCategories: JSONQueryOperatorInput
-  _rawExcerpt: JSONQueryOperatorInput
   _rawMainImage: JSONQueryOperatorInput
   _rawSlug: JSONQueryOperatorInput
   _rev: StringQueryOperatorInput
   _type: StringQueryOperatorInput
   _updatedAt: DateQueryOperatorInput
-  authors: SanityAuthorReferenceFilterListInput
   body: SanityBlockFilterListInput
   categories: SanityCategoryFilterListInput
   children: NodeFilterListInput
-  excerpt: SanityBlockFilterListInput
+  excerpt: StringQueryOperatorInput
   id: StringQueryOperatorInput
   internal: InternalFilterInput
   mainImage: SanityMainImageFilterInput
@@ -4088,6 +4027,7 @@ input SitePageSortInput {
 }
 
 input SitePluginFilterInput {
+  browserAPIs: StringQueryOperatorInput
   children: NodeFilterListInput
   id: StringQueryOperatorInput
   internal: InternalFilterInput
@@ -4156,6 +4096,7 @@ input SitePluginPluginOptionsFilterInput {
   path: StringQueryOperatorInput
   pathCheck: BooleanQueryOperatorInput
   projectId: StringQueryOperatorInput
+  specialChars: StringQueryOperatorInput
   stripMetadata: BooleanQueryOperatorInput
   token: StringQueryOperatorInput
   watchMode: BooleanQueryOperatorInput

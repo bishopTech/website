@@ -60,7 +60,7 @@ export const query = graphql`
             }
           }
           title
-
+          excerpt
           slug {
             current
           }

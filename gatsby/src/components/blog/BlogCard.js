@@ -27,7 +27,7 @@ export default function BlogCard ({post}) {
                 {title}
               </h3>
               <p className='mt-3 text-base text-gray-500'>
-                {/* {excerpt || 'Excerpt here!'} */}
+                {excerpt || 'Excerpt here!'}
               </p>
             </Link>
           </div>

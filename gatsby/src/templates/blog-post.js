@@ -36,7 +36,7 @@ export const query = graphql`
       slug {
         current
       }
-#      _rawExcerpt(resolveReferences: {maxDepth: 5})
+      excerpt
       _rawBody(resolveReferences: {maxDepth: 5})
     }
   }
