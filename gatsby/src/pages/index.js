@@ -1,31 +1,42 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import BackgroundImage from 'gatsby-background-image'
 import {graphql, Link} from 'gatsby'
 
 import '../styles/global.css'
+import Layout from '../components/layout/Layout'
 import Nav from '../components/layout/Nav'
 
 export const query = graphql`
 query {
-
   image: file(relativePath: { eq: "images/bishopTechLogoIcon.png" }) {
-          childImageSharp {
-        # Specify the image processing specifications right in the query.
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
+    childImageSharp {
+      # Specify the image processing specifications right in the query.
+      fluid {
+        ...GatsbyImageSharpFluid
       }
+    }
+  }
+
+  bgImage: file(relativePath: { eq: "images/bishopTechbg1080.png" }) {
+    childImageSharp {
+      # Specify the image processing specifications right in the query.
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
   }
 }
 `
 
-export default function index ({data: {post, image}}) {
+export default function index ({data: {post, image, bgImage}}) {
   console.log(image)
   return (
-    <div className='text-white'>
-      <div className='min-h-full hero'>
-        <Nav transparent className='w-full' />
-        <div className='flex flex-col items-center justify-center mt-10 md:space-x-6'>
+    <Layout transparent nav={false}>
+      <BackgroundImage Tag='div' className='min-h-screen absolute text-white' fluid={bgImage.childImageSharp.fluid}>
+        <Nav transparent />
+
+        <div className='flex flex-col items-center justify-center md:space-x-6'>
           <Img fluid={image.childImageSharp.fluid} alt='Pixelated logo - Bishop tech Logo' className='w-1/2 md:w-1/4' />
           <div className='mt-6 text-center'>
             <h1 className='text-4xl font-bold'>👋 Welcome to Bishop Tech!</h1>
@@ -37,7 +48,7 @@ export default function index ({data: {post, image}}) {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </BackgroundImage>
+    </Layout>
   )
 }

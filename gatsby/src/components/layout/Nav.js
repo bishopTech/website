@@ -4,13 +4,7 @@ import Img from 'gatsby-image'
 
 // Create a static query for image
 
-export default function Nav ({transparent}) {
-  if (transparent) {
-    console.log(transparent)
-  } else {
-    console.log('Not transparent!!!')
-  }
-
+export default function Nav ({transparent, nav}) {
   const image = useStaticQuery(graphql`
     query NavImage {
       file(relativePath: {eq: "images/bishopTechLogoIcon.png"}) {
@@ -26,12 +20,13 @@ export default function Nav ({transparent}) {
   console.log('Data:', image.file)
 
   return (
-    <nav className={`flex justify-between p-10 text-white ${transparent ? 'bg-transparent' : 'bg-darkest-blue border-b-2 border-dark-blue'} text-xl`}>
+    <nav className={`flex justify-between p-10 text-white
+    ${transparent ? 'bg-transparent relative' : 'bg-darkest-blue border-b-2 border-dark-blue'}
+    text-xl`}>
       <Link
         to='/'
         className='object-cover h-full'
       >
-        {/* <Img fluid={image.file.childImageSharp.fluid} alt='Full Bishop Tech logo' className='' /> */}
         Home
       </Link>
       <Link

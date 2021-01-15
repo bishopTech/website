@@ -1,16 +1,12 @@
 import React from 'react'
 import Nav from './Nav'
 import Footer from './Footer'
-export default function Layout ({children}) {
+export default function Layout ({children, transparent, nav}) {
   return (
     <>
-      <Nav />
+      { nav !== false && <Nav transparent={transparent} />}
       {/* Where the pages are displayed */}
-      <div className='min-h-screen bg-darkest-blue text-blue-50'>
-        <div className=''>
-          {children}
-        </div>
-      </div>
+      {children}
       <Footer />
     </>
   )

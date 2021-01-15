@@ -6,6 +6,7 @@ import {toPlainText} from '../lib/helpers'
 import PortableText from '../components/sanity/portableText'
 import Img from 'gatsby-image'
 import Layout from '../components/layout/Layout'
+import BackgroundImage from 'gatsby-background-image'
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
@@ -25,7 +26,7 @@ export const query = graphql`
           fluid(maxWidth: 800) {
             ...GatsbySanityImageFluid
           }
-        } 
+        }
       }
       title
       categories {
@@ -134,3 +135,6 @@ const BlogPostTemplate = props => {
 }
 
 export default BlogPostTemplate
+
+// Backgroung Image:
+// <BackgroundImage Tag='div' className='md:py-32' fluid={image.childImageSharp.fluid} backgroundColor={`#040e18`} > <h2> test </h2> </BackgroundImage>
