@@ -4,8 +4,8 @@ import {getBlogUrl} from '../../lib/helpers'
 import Img from 'gatsby-image'
 
 export default function BlogCard ({post}) {
-  const {_rawExcerpt, authors, categories, title, mainImage, publishedAt, slug} = post
-  console.log('excerpt ', _rawExcerpt)
+  const {excerpt, categories, title, mainImage, publishedAt, slug} = post
+  console.log('excerpt ', excerpt)
   console.log('props: ', post)
   return (
     <>
