@@ -48,7 +48,7 @@ export default function Nav ({transparent, nav}) {
       </Link>
       <Link
         to='/hire'
-        className='px-8 py-3 text-gray-900 transition duration-75 transform bg-white rounded-full justify-items-center hover:text-gray-200 hover:scale-105'
+        className='transition duration-75 transform hover:text-gray-200 hover:scale-105'
       >
         Hire Me
       </Link>
