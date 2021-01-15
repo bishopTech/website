@@ -27,6 +27,13 @@ module.exports = {
         path: `${__dirname}/src/assets/`
       }
     },
+    {
+      resolve: 'gatsby-background-image-es5',
+      options: {
+        // add your own characters to escape, replacing the default ':/'
+        specialChars: '/:'
+      }
+    },
     'gatsby-plugin-postcss',
     {
       resolve: `gatsby-plugin-google-fonts`,
