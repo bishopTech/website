@@ -35,7 +35,7 @@ export default function about ({data: {image}}) {
               <div className='relative text-base mx-auto max-w-prose lg:max-w-none'>
                 <figure>
                   <div className='aspect-w-12 aspect-h-7 lg:aspect-none'>
-                    <img className='rounded-lg shadow-lg object-cover object-center' src={image.publicURL} alt='Whitney leaning against a railing on a downtown street' width='1184' height='1376' />
+                    <img className='rounded-lg shadow-lg object-cover object-center' src={image.publicURL} alt='Chris looking up into the distance' width='1184' height='1376' />
                   </div>
                   <figcaption className='mt-3 flex text-sm text-gray-500'>
                     {/* herocon name camera */}
@@ -49,27 +49,33 @@ export default function about ({data: {image}}) {
             </div>
             <div className='mt-8 lg:mt-0'>
               <div className='text-base max-w-prose mx-auto lg:max-w-none'>
-                <p className='text-lg text-gray-500'>
-                  👋 Hello and welcome to Bishop Tech! My name is Chris Bishop, I'm a developer from Toronto, Canada with a passion for Cyber Security.
+                <p className='text-xl text-gray-500'>
+                  👋 Hello and Welcome to Bishop Tech! <br />
+                  My name is Chris Bishop, I'm a developer from Toronto, Canada with a passion for Cyber Security.
                 </p>
               </div>
-              <div className='mt-5 prose prose-blue text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1'>
+              <div className='mt-5 text-lg prose prose-blue text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1'>
                 <p>
-                  One thing I noticed as I started learning to code is the access to education content catered around beginners and those trying to enter the world of computer science and cyber security is hard to find.
+                  One thing I noticed as I started learning to code is the access to educational content catered around beginners and those trying to enter the world of computer science and cyber security is hard to find.
+                </p>
+                <p>
                   Even more the access to affordable or free content to take you from knowing nothing to job ready is even more scarce.
                 </p>
-
                 <p>
-                  So as a recent grad from Ryerson Univeristy with my Computer Science undergrad in hand I decided I wanted to make it my mission to create a site to solve this problem! I wanted to create a personal blog but as a platform for me to help make learning to code more accessible to all!
-                  In the early part of my career I have already learned so much about coding and business.
-                  So I wanted to create a site to track my personal journey and pass on any lessons I learn to you.
+                  So as a recent grad from Ryerson Univeristy with my Computer Science undergrad in hand I decided I wanted to make it my mission to create a site to solve this problem! That is why I created Bishop Tech. I wanted to create a personal blog to track my journey in start of my career and along the way use this platform to give back and teach anyone interested the skills I've gained or lessons I've learned. I Again with the goal in mind of making learning to code and getting into the industry more accessible for anyone with an interest!
+                </p>
+                <p>
+                  Again with the goal in mind of making learning to code and getting into the industry more accessible for anyone with an interest!
+                </p>
+                <p>
+                  In the early part of my career I have been afforded many opportunities and already learned so much about coding and business.
+                  So I can't wait to share with you all that I have learned and am excited to grow together with you as we aim to acheive our dreams in this digital world!
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </Layout>
   )
 }
