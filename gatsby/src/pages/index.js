@@ -6,6 +6,8 @@ import {graphql, Link} from 'gatsby'
 import '../styles/global.css'
 import Layout from '../components/layout/Layout'
 import Nav from '../components/layout/Nav'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faVuejs} from '@fortawesome/free-brands-svg-icons'
 
 export const query = graphql`
 query {
@@ -26,11 +28,16 @@ query {
       }
     }
   }
+
+  downIcon: file(relativePath: { eq: "images/icons/BT - GE - Arrow Down - LG.svg" }) {
+    publicURL
+  }
 }
 `
 
-export default function index ({data: {post, image, bgImage}}) {
+export default function index ({data: {post, image, bgImage, downIcon}}) {
   console.log(image)
+
   return (
     <Layout transparent nav={false}>
 
@@ -43,17 +50,22 @@ export default function index ({data: {post, image, bgImage}}) {
           <div className='mt-8 text-center'>
             <h1 className='text-4xl  uppercase'>Join me &amp; learn to code
               <br className='hidden sm:block' /> for <strong>FREE!</strong></h1>
-            {/* <h2 className='text-4xl font-light mt-6'>Follow me in my career as I pass on the lessons I learn to you</h2> */}
-            <div className='mt-16 space-x-3 hidden md:block'>
-              <Link to='/about' className='px-8 py-3 font-semibold duration-300 border-2 border-white bg-darkest-blue text-off-white rounded-xl hover:bg-white hover:text-darkest-blue'>Learn More</Link>
-              <Link to='/blog' className='px-8 py-3 font-semibold duration-300 border-2 border-white hover:border-off-white bg-darkest-blue text-off-white rounded-xl hover:bg-white hover:text-darkest-blue'>Read Articles</Link>
+
+            {/* <div className='mt-16 space-x-3 hidden md:block'> */}
+            {/*  <Link to='/about' className='px-8 py-3 font-semibold duration-300 border-2 border-white bg-darkest-blue text-off-white rounded-xl hover:bg-white hover:text-darkest-blue'>Learn More</Link> */}
+            {/*  <Link to='/blog' className='px-8 py-3 font-semibold duration-300 border-2 border-white hover:border-off-white bg-darkest-blue text-off-white rounded-xl hover:bg-white hover:text-darkest-blue'>Read Articles</Link> */}
+
+            {/* </div> */}
+            <div className='mt-28 flex justify-center'>
+              <img src={downIcon.publicURL} alt='Down Arrow Icon' className='h-8 animate-bounce text-center' />
             </div>
+
           </div>
         </div>
       </BackgroundImage>
 
       {/* <!-- About Section --> */}
-      <div className='md:flex mx-auto'>
+      <div className='md:flex mx-auto' id='about'>
         <div className='py-8 w-full md:w-2/3 bg-blue-900'>
           <Img fluid={image.childImageSharp.fluid} />
         </div>
@@ -78,18 +90,23 @@ export default function index ({data: {post, image, bgImage}}) {
 
       <div className='py-32 bg-blue-900'>
         <h1 className='text-4xl text-center text-white'>What you'll learn</h1>
+
       </div>
 
       {/* <!-- Featured Posts Section --> */}
 
       <div className='py-32 bg-green-900'>
         <h1 className='text-4xl text-center text-white'>Featured Posts</h1>
+
       </div>
 
       {/* <!-- Contact Section --> */}
       <div className='py-32 bg-red-900'>
         <h1 className='text-4xl text-center text-white'>Get in touch!</h1>
       </div>
+
+      {/* <FontAwesomeIcon icon={faVuejs} size={'6x'} color={'#fff'} /> */}
+      {/* <FontAwesomeIcon icon={faVuejs} size={'6x'} className='text-gray-900 hover:text-green-500' /> */}
 
     </Layout>
   )
