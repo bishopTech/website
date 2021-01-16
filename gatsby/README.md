@@ -2,7 +2,6 @@
 
 # TODO
 ### Today goals:
-- Install React Font Awesome
 - What you'll learn (cloud)
 - finish about section
   - get image for about section
@@ -10,10 +9,8 @@
 - Do about page
 - do contact form on home page
 - start footer
-- add down arrow with tailwind animation
 - add in the new custom colors
 
-Current bandwidth: 63 MB
 
 ## Dev Branch
 
