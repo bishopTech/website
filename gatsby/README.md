@@ -13,7 +13,7 @@
 - add down arrow with tailwind animation
 - add in the new custom colors
 
-
+Current bandwidth: 63 MB
 
 ## Dev Branch
 

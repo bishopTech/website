@@ -29,6 +29,10 @@ query {
       fluid {
         ...GatsbyImageSharpFluid
       }
+      fixed(width: 1920) {
+        ...GatsbyImageSharpFixed
+      }
+
     }
   }
 
@@ -48,7 +52,7 @@ export default function index ({data: {post, image, bgImage, downIcon}}) {
     <Layout transparent nav={false}>
 
       {/* <!-- Hero Section --> */}
-      <BackgroundImage Tag='div' className='min-h-screen absolute text-white' fluid={bgImage.childImageSharp.fluid}>
+      <BackgroundImage Tag='div' className='min-h-screen absolute text-white' fluid={bgImage.childImageSharp.fixed}>
         <Nav transparent />
 
         <div className='flex flex-col items-center justify-center md:space-x-6 mt-16 pb-32'>
