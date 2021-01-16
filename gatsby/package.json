@@ -50,6 +50,7 @@
     "gatsby-source-filesystem": "^2.8.1",
     "gatsby-transformer-sharp": "^2.9.0",
     "postcss": "^8.2.2",
+    "react-scroll": "^1.8.1",
     "tailwindcss": "^2.0.2"
   }
 }

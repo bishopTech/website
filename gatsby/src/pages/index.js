@@ -6,6 +6,9 @@ import {graphql, Link} from 'gatsby'
 import '../styles/global.css'
 import Layout from '../components/layout/Layout'
 import Nav from '../components/layout/Nav'
+
+import {Link as ScrollLink, animateScroll as scroll} from 'react-scroll'
+
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faVuejs} from '@fortawesome/free-brands-svg-icons'
 
@@ -37,6 +40,9 @@ query {
 
 export default function index ({data: {post, image, bgImage, downIcon}}) {
   console.log(image)
+  const scrollToTop = () => {
+    scroll.scrollToTop()
+  }
 
   return (
     <Layout transparent nav={false}>
@@ -51,13 +57,10 @@ export default function index ({data: {post, image, bgImage, downIcon}}) {
             <h1 className='text-4xl  uppercase'>Join me &amp; learn to code
               <br className='hidden sm:block' /> for <strong>FREE!</strong></h1>
 
-            {/* <div className='mt-16 space-x-3 hidden md:block'> */}
-            {/*  <Link to='/about' className='px-8 py-3 font-semibold duration-300 border-2 border-white bg-darkest-blue text-off-white rounded-xl hover:bg-white hover:text-darkest-blue'>Learn More</Link> */}
-            {/*  <Link to='/blog' className='px-8 py-3 font-semibold duration-300 border-2 border-white hover:border-off-white bg-darkest-blue text-off-white rounded-xl hover:bg-white hover:text-darkest-blue'>Read Articles</Link> */}
-
-            {/* </div> */}
             <div className='mt-28 flex justify-center'>
-              <img src={downIcon.publicURL} alt='Down Arrow Icon' className='h-8 animate-bounce text-center' />
+              <ScrollLink to='about' smooth duration={700}>
+                <img src={downIcon.publicURL} alt='Down Arrow Icon' className='h-8 animate-bounce text-center' />
+              </ScrollLink>
             </div>
 
           </div>
@@ -106,8 +109,10 @@ export default function index ({data: {post, image, bgImage, downIcon}}) {
       </div>
 
       {/* <FontAwesomeIcon icon={faVuejs} size={'6x'} color={'#fff'} /> */}
-      {/* <FontAwesomeIcon icon={faVuejs} size={'6x'} className='text-gray-900 hover:text-green-500' /> */}
-
+      <FontAwesomeIcon icon={faVuejs} size={'6x'} className='text-gray-900 hover:text-green-500' onClick={scrollToTop} />
+      <div className='p-10 bg-blue-900 rounded bottom-0 left-0 rotate-180'>
+        <img src={downIcon.publicURL} alt='Down Arrow Icon' className='h-8 animate-bounce text-center rotate-180 ' onClick={scrollToTop} />
+      </div>
     </Layout>
   )
 }
