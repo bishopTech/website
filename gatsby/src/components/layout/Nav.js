@@ -3,7 +3,6 @@ import React from 'react'
 import Img from 'gatsby-image'
 
 // Create a static query for image
-
 export default function Nav ({transparent, nav}) {
   const image = useStaticQuery(graphql`
     query NavImage {
