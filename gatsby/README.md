@@ -1,18 +1,31 @@
 # Gatsby Site
 
 # TODO
+### Today goals:
+- Install React Font Awesome
+- What you'll learn (cloud)
+- finish about section
+  - get image for about section
+- Do Feature Posts section
+- Do about page
+- do contact form on home page
+- start footer
+- add down arrow with tailwind animation
+- add in the new custom colors
+
+
 
 ## Dev Branch
 
 ### GO LIVE GOALS
 
 - [ ] Home Page
-  - [ ] Hero Section (Why should people care)
+  - [x] Hero Section (Why should people care)
   - [ ] Proof (Who am I and what i've done)
   - [ ] Logo Cloud (technologies you'll learn)
   - [ ] Featured Posts
   - [ ] Have any questions?
-  - [ ] Footer
+- [ ] Footer
 - [ ] Nav
 - [ ] About Page
 - [ ] Blog Cards + Pagination
