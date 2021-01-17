@@ -18,3 +18,24 @@
 - [ ] Brand Sanity
 - [ ] set up series
 - [ ] set up links page data
+
+
+----
+
+# For Tips add this to the bottom of the sanity.json:
+
+```json
+
+....
+ plugins: {
+"@sanity/studio-hints",
+}
+...
+
+
+{
+  "implements": "part:@sanity/default-layout/studio-hints-config",
+  "path": "./src/studioHintsConfig.js"
+}
+
+```

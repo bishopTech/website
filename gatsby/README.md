@@ -2,15 +2,17 @@
 
 # TODO
 ### Today goals:
-- What you'll learn (cloud)
-- finish about section
-  - get image for about section
+
 - Do Feature Posts section
-- Do about page
 - do contact form on home page
 - start footer
 - add in the new custom colors
+- sanity code-input
 
+### What i completed:
+- What you'll learn (cloud)
+- finish about section
+  - get image for about section
 
 ## Dev Branch
 
