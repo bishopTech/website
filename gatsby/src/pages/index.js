@@ -10,8 +10,8 @@ import Nav from '../components/layout/Nav'
 import {Link as ScrollLink, animateScroll as scroll} from 'react-scroll'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faVuejs} from '@fortawesome/free-brands-svg-icons'
-
+import {faVuejs, faJsSquare, faNodeJs, faReact, faPython} from '@fortawesome/free-brands-svg-icons'
+import {faGem, faTint} from '@fortawesome/free-solid-svg-icons'
 export const query = graphql`
 query {
   image: file(relativePath: { eq: "images/bishopTechLogoIcon.png" }) {
@@ -39,11 +39,22 @@ query {
   downIcon: file(relativePath: { eq: "images/icons/BT - GE - Arrow Down - LG.svg" }) {
     publicURL
   }
+
+  personalImage: file(relativePath: { eq: "images/personal.JPG" }) {
+    childImageSharp {
+      # Specify the image processing specifications right in the query.
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+
+  }
+
 }
 `
 
-export default function index ({data: {post, image, bgImage, downIcon}}) {
-  console.log(image)
+export default function index ({data: {post, image, bgImage, downIcon, personalImage}}) {
+  console.log(personalImage)
   const scrollToTop = () => {
     scroll.scrollToTop()
   }
@@ -73,13 +84,14 @@ export default function index ({data: {post, image, bgImage, downIcon}}) {
 
       {/* <!-- About Section --> */}
       <div className='md:flex mx-auto' id='about'>
-        <div className='py-8 w-full md:w-2/3 bg-blue-900'>
-          <Img fluid={image.childImageSharp.fluid} />
-        </div>
-        <div className='py-32 md:flex-grow container mx-auto flex flex-col text-center border border-black' >
+        <BackgroundImage Tag='div' fluid={personalImage.childImageSharp.fluid} className='hidden md:block w-full md:w-2/3' />
+
+        <div className='py-32 md:flex-grow container mx-auto flex flex-col text-center' >
           <h1 className='text-4xl font-bold'>👋 Welcome to Bishop Tech!</h1>
           <h2 className='text-3xl font-light'>Created by Chris Bishop</h2>
-          <div className='mt-14 container text-lg px-10'>
+          <Img fluid={personalImage.childImageSharp.fluid} className='md:hidden h-96 mx-8 mt-8 rounded-lg' />
+
+          <div className='mt-10 md:mt-14 container text-lg px-10'>
             <p>
               The access to education content catered around beginners and those trying to enter the world of computer science and cyber security is hard to find.
               Even more the access to affordable or free content to take you from knowing nothing to job ready is even more scarce.
@@ -94,10 +106,46 @@ export default function index ({data: {post, image, bgImage, downIcon}}) {
       </div>
 
       {/* <!-- What you'll learn Section --> */}
-
-      <div className='py-32 bg-blue-900'>
-        <h1 className='text-4xl text-center text-white'>What you'll learn</h1>
-
+      <div className='bg-darkest-blue'>
+        <div className='max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8'>
+          <h2 className='text-3xl font-bold text-white'>
+            What you can expect to learn:
+          </h2>
+          <div className='flow-root mt-8 lg:mt-10'>
+            <div className='-mt-4 -ml-8 flex flex-wrap justify-between lg:-ml-4'>
+              <div className='mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4'>
+                <p className='h-12 text-white hover:text-yellow-300 flex justify-center'>
+                  <FontAwesomeIcon icon={faJsSquare} size={'6xl'} className='text-4xl' />
+                  <span className='text-3xl ml-3'>Javascript</span>
+                </p>
+              </div>
+              <div className='mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4'>
+                <p className='h-12 text-white hover:text-blue-300 flex justify-center'>
+                  <FontAwesomeIcon icon={faReact} size={'6xl'} className='text-4xl' />
+                  <span className='text-3xl ml-3'>React</span>
+                </p>
+              </div>
+              <div className='mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4'>
+                <p className='h-12 text-white hover:text-green-400 flex justify-center'>
+                  <FontAwesomeIcon icon={faVuejs} size={'6xl'} className='text-4xl' />
+                  <span className='text-3xl ml-3'>Vue</span>
+                </p>
+              </div>
+              <div className='mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4'>
+                <p className='h-12 text-white hover:text-red-500 flex justify-center'>
+                  <FontAwesomeIcon icon={faGem} size={'6xl'} className='text-4xl' />
+                  <span className='text-3xl ml-3'>Ruby</span>
+                </p>
+              </div>
+              <div className='mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4'>
+                <p className='h-12 text-white hover:text-purple-300 flex justify-center'>
+                  <FontAwesomeIcon icon={faTint} size={'6xl'} className='text-4xl' />
+                  <span className='text-3xl ml-3'>Elixir</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* <!-- Featured Posts Section --> */}
