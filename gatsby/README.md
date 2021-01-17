@@ -10,6 +10,15 @@
 - fix blog squares
 - add code syntax colors
 
+under what you'll learn:
+
+If this is your first time check this out these:
+
+Most Recent posts:
+
+Make the what you'll learn link to the tags of the technologies
+If this is your first time looking into the world of coding I suggest you start with (…)
+
 ### What i completed:
 - What you'll learn (cloud)
 - finish about section

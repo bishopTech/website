@@ -93,14 +93,14 @@ export default function index ({data: {post, image, bgImage, downIcon, personalI
 
           <div className='mt-10 md:mt-14 container text-lg px-10'>
             <p>
-              The access to education content catered around beginners and those trying to enter the world of computer science and cyber security is hard to find.
-              Even more the access to affordable or free content to take you from knowing nothing to job ready is even more scarce.
+              Access to educational content catered towards beginners and those trying to enter the world of computer science and cyber security is hard to find. Even more so, accessing affordable or free content to take you from first laying your hand on a keyboard to becoming job ready is even more scarce. Seems to be a bit like finding a pot of gold at the end of the rainbow. Well, I hope that today you just found your pot of gold!
             </p>
             <p className='mt-6'>
-              So I created this site not only as a personal blog but as a platform for me to help make learning to code more accessible to all!
-              In the early part of my career I have already learned so much about coding and business.
-              So I wanted to create a site to track my personal journey and pass on any lessons I learn to you.
+              I created this site as a platform for me to help make learning to code more accessible to all! In the early part of my career I have already learned so much about coding, and some tricks of the trade for business as well. So I wanted to create a site to track my personal journey, and pass on any lessons I learn to you. So welcome!
             </p>
+            {/* <p className='mt-6' > */}
+            {/*  If this is your first time looking into the world of coding I suggest you start with (…) */}
+            {/* </p> */}
           </div>
         </div>
       </div>
