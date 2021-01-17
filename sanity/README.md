@@ -26,13 +26,14 @@
 
 ```json
 
-....
+...
+
  plugins: {
 "@sanity/studio-hints",
 }
 ...
 
-
+parts:
 {
   "implements": "part:@sanity/default-layout/studio-hints-config",
   "path": "./src/studioHintsConfig.js"
