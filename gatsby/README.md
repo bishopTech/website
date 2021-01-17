@@ -7,7 +7,8 @@
 - do contact form on home page
 - start footer
 - add in the new custom colors
-- sanity code-input
+- fix blog squares
+- add code syntax colors
 
 ### What i completed:
 - What you'll learn (cloud)
