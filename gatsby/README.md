@@ -13,6 +13,9 @@
 - What you'll learn (cloud)
 - finish about section
   - get image for about section
+- Created a custom code block in Sanity Studio
+- Created a Serializer in Gatsby to display the code block from sanity
+- Updated the post sanity portable text
 
 ## Dev Branch
 
