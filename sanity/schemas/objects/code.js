@@ -41,12 +41,14 @@ export default {
           {title: 'bash', value: 'sh'}
         ],
         layout: 'radio'
-      }
+      },
+      validation: Rule => Rule.required()
     },
     {
       name: 'code',
       type: 'text',
-      title: 'Code'
+      title: 'Code',
+      validation: Rule => Rule.required()
     }
   ],
   preview: {
