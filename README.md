@@ -1,20 +1,5 @@
 # Bishop Tech
 
-## Weekend Goals
-
-- [ ] Choose Design for :
-  - [ ] Home
-  - [ ] About
-  - [ ] Blog
-  - [ ] Hire
-  - [ ] Links
-  - [ ] Resume
-- [ ] Design Pages
-  - [ ] Nav
-  - [ ] Home
-  - [ ] About
-  - [ ] Blog (Raw Block)
-
 ## TODO
 
 - [ ] Design Pages
@@ -27,14 +12,14 @@
 - [ ] Configure SEO
 - [ ] Paginate Items
 - [ ] Update Data on studio
-  - [ ] Code Block
-    - [ ] Code
-    - [ ] Language
+  - [x] Code Block
+    - [x] Code
+    - [x] Language
     - [ ] Language Styling (icon)
-    - [ ] File (text)
+    - [x] File (text)
   - [ ] Category
     - [ ] Name
     - [ ] Icon
-  - [ ] Update Author
+  - [x] Update Author
   - [ ] Update Settings
   - [ ] Create Links
