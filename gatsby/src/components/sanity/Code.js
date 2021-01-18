@@ -1,4 +1,6 @@
 import React from 'react'
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import {xonokai} from 'react-syntax-highlighter/src/styles/prism'
 
 export default ({node}) => {
   if (!node || !node.code) {
@@ -9,9 +11,19 @@ export default ({node}) => {
     <div>
       file name = {fileName} <br />
       language = {lang}
-      <pre lang='javascript'>
+
+      <SyntaxHighlighter
+        showLineNumbers
+        showInlineNumbers
+        wrapLines
+        language={lang || 'text'}
+        style={xonokai}
+        codeTagProps={{style: {fontFamily: 'Source Code Pro'}}}
+        customStyle={{borderRadius: '0.75rem'}}
+        className='rounded-xl'
+      >
         {code}
-      </pre>
+      </SyntaxHighlighter>
     </div>
   )
 }
