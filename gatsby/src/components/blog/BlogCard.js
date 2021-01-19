@@ -2,6 +2,7 @@ import {Link} from 'gatsby'
 import React from 'react'
 import {getBlogUrl} from '../../lib/helpers'
 import Img from 'gatsby-image'
+import Category from './Category'
 
 export default function BlogCard ({post}) {
   const {excerpt, categories, title, mainImage, publishedAt, slug} = post
@@ -17,10 +18,8 @@ export default function BlogCard ({post}) {
         </Link>
         <div className='flex flex-col justify-between flex-1 p-6 bg-white'>
           <div className='flex-1'>
-            <p className='text-sm font-medium text-blue-600'>
-              <a href='#' className='hover:underline'>
-                {categories.map(category => category.title).join(', ').toUpperCase()}
-              </a>
+            <p className='text-sm font-medium text-blue-600 flex'>
+              {categories.map(category => <Category category={category} />) }
             </p>
             <Link to={getBlogUrl(publishedAt, slug)} className='block mt-2'>
               <h3 className='text-xl font-semibold text-gray-900'>
@@ -52,7 +51,7 @@ export default function BlogCard ({post}) {
                   &middot;
                 </span>
                 <span>
-                  6 min read
+                  Series
                 </span>
               </div>
             </div>

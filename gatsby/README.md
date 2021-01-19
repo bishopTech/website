@@ -8,7 +8,6 @@
 - start footer
 - add in the new custom colors
 - fix blog squares
-- add code syntax colors
 
 under what you'll learn:
 
@@ -19,13 +18,7 @@ Most Recent posts:
 Make the what you'll learn link to the tags of the technologies
 If this is your first time looking into the world of coding I suggest you start with (…)
 
-### What i completed:
-- What you'll learn (cloud)
-- finish about section
-  - get image for about section
-- Created a custom code block in Sanity Studio
-- Created a Serializer in Gatsby to display the code block from sanity
-- Updated the post sanity portable text
+
 
 ## Dev Branch
 
