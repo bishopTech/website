@@ -2,7 +2,8 @@ import S from '@sanity/desk-tool/structure-builder'
 import {MdSettings,
   MdPerson,
   MdDescription,
-  MdLocalOffer
+  MdLocalOffer,
+  MdViewList
 } from 'react-icons/md'
 
 import IframePreview from '../previews/IframePreview'
@@ -67,12 +68,17 @@ export default () =>
         .icon(MdLocalOffer)
         .schemaType('category')
         .child(S.documentTypeList('category').title('Categories')),
+      S.listItem()
+        .title('Series')
+        .icon(MdViewList)
+        .schemaType('series')
+        .child(S.documentTypeList('series').title('Series')),
       // `S.documentTypeListItems()` returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above.
       ...S.documentTypeListItems().filter(
         listItem =>
-          !['category', 'author', 'post', 'siteSettings'].includes(
+          !['category', 'series', 'post', 'siteSettings'].includes(
             listItem.getId()
           )
       )

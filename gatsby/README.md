@@ -3,11 +3,18 @@
 # TODO
 ### Today goals:
 
+- first time posts
 - Do Feature Posts section
 - do contact form on home page
 - start footer
 - add in the new custom colors
 - fix blog squares
+- Do coming soon if missing posts
+- Complete Nav
+- Back to top button
+- Responsive Nav
+- SEO
+- Favicon
 
 under what you'll learn:
 
@@ -26,15 +33,15 @@ If this is your first time looking into the world of coding I suggest you start 
 
 - [ ] Home Page
   - [x] Hero Section (Why should people care)
-  - [ ] Proof (Who am I and what i've done)
-  - [ ] Logo Cloud (technologies you'll learn)
+  - [x] Proof (Who am I and what i've done)
+  - [x] Logo Cloud (technologies you'll learn)
   - [ ] Featured Posts
   - [ ] Have any questions?
 - [ ] Footer
 - [ ] Nav
-- [ ] About Page
+- [x] About Page
 - [ ] Blog Cards + Pagination
-- [ ] Blog Post Page
+- [x] Blog Post Page
 
 ## Tinker Branch
 
@@ -48,8 +55,8 @@ If this is your first time looking into the world of coding I suggest you start 
 - [ ] Correct SEO file
 - [x] Install Tailwind CSS
 - [x] update to most recent gatsby version
-- [ ] add fontawesome
-- [ ] import source code pro font
+- [x] add fontawesome
+- [x] import source code pro font
 - [ ] import dank mono font (in the font zip)
 - [ ] reading progress
 - [ ] Disqus
@@ -57,6 +64,7 @@ If this is your first time looking into the world of coding I suggest you start 
 
 ## Future
 
-- [ ] Testimonials
+- [ ] Complete Backend
 - [ ] Resume
 - [ ] Hire Me
+- [ ]

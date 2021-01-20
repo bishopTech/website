@@ -53,6 +53,19 @@ export default {
       ]
     },
     {
+      name: 'series',
+      type: 'array',
+      title: 'Series',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'series'
+          }
+        }
+      ]
+    },
+    {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'

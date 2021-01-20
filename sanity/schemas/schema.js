@@ -15,6 +15,7 @@ import bioPortableText from './objects/bioPortableText'
 import mainImage from './objects/mainImage'
 import code from './objects/code'
 import codePen from './objects/codePen'
+import series from './documents/series'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -27,6 +28,7 @@ export default createSchema({
     siteSettings,
     post,
     category,
+    series,
     mainImage,
     bodyPortableText,
     bioPortableText,
