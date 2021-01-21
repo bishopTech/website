@@ -13,8 +13,10 @@
 - Complete Nav
 - Back to top button
 - Responsive Nav
+    - The mobile nav is a bar on the bottom of the page with 3 options, Home about & blog
 - SEO
 - Favicon
+- add google analytics
 
 under what you'll learn:
 
