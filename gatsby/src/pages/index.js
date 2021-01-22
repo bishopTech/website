@@ -12,6 +12,7 @@ import {Link as ScrollLink, animateScroll as scroll} from 'react-scroll'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faVuejs, faJsSquare, faNodeJs, faReact, faPython} from '@fortawesome/free-brands-svg-icons'
 import {faGem, faTint} from '@fortawesome/free-solid-svg-icons'
+import BlogCard from '../components/blog/BlogCard'
 export const query = graphql`
 query {
   image: file(relativePath: { eq: "images/bishopTechLogoIcon.png" }) {
@@ -147,9 +148,19 @@ export default function index ({data: {post, image, bgImage, downIcon, personalI
 
       {/* <!-- Featured Posts Section --> */}
 
-      <div className='py-32 bg-green-900'>
-        <h1 className='text-4xl text-center text-white'>Featured Posts</h1>
-
+      <div className='py-32 px-16'>
+        <h1 className='mb-4 text-5xl text-center text-darkest-blue font-extrabold lg:text-6xl'>
+          Where to Start?
+        </h1>
+        <h2 className='text-center text-lg'>
+          If this your first time looking into the world of coding I suggest starting with any of these series:
+        </h2>
+        <div className='mt-16'>
+          <div className='py-8 bg-gray-200 group transform transition rounded-full text-center shadow duration-300 hover:scale-110 hover:shadow-xl'>
+            <span className='text-3xl group-hover:hidden'>Coming Soon!</span>
+            <span className='text-sm hidden transition transition duration-300 group-hover:block text-3xl'>really soon 🤞</span>
+          </div>
+        </div>
       </div>
 
       {/* <!-- Contact Section --> */}
@@ -157,11 +168,8 @@ export default function index ({data: {post, image, bgImage, downIcon, personalI
         <h1 className='text-4xl text-center text-white'>Get in touch!</h1>
       </div>
 
-      {/* <FontAwesomeIcon icon={faVuejs} size={'6x'} color={'#fff'} /> */}
-      <FontAwesomeIcon icon={faVuejs} size={'6x'} className='text-gray-900 hover:text-green-500' onClick={scrollToTop} />
-      <div className='p-10 bg-blue-900 rounded bottom-0 left-0 rotate-180'>
-        <img src={downIcon.publicURL} alt='Down Arrow Icon' className='h-8 animate-bounce text-center rotate-180 ' onClick={scrollToTop} />
-      </div>
+      {/* <FontAwesomeIcon icon={faVuejs} size={'6x'} className='text-gray-900 hover:text-green-500' onClick={scrollToTop} /> */}
+
     </Layout>
   )
 }

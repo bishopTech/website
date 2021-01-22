@@ -23,11 +23,16 @@ module.exports = {
         //   }
         // }
       }
+
     }
 
   },
   variants: {
-    extend: {}
+    extend: {
+      transform: ['hover', 'focus'],
+      display: ['group-hover'],
+      rotate: ['active', 'group-hover']
+    }
   },
   plugins: [
     require('@tailwindcss/forms'),
