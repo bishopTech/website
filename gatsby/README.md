@@ -44,6 +44,7 @@ If this is your first time looking into the world of coding I suggest you start 
 - [x] About Page
 - [ ] Blog Cards + Pagination
 - [x] Blog Post Page
+- [ ] Replace cursor with mouse icon
 
 ## Tinker Branch
 
