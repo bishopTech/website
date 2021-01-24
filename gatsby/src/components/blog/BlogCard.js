@@ -6,8 +6,8 @@ import Category from './Category'
 
 export default function BlogCard ({post}) {
   const {excerpt, categories, title, mainImage, publishedAt, slug} = post
-  console.log('excerpt ', excerpt)
-  console.log('props: ', post)
+  // console.log('excerpt ', excerpt)
+  // console.log('props: ', post)
   return (
     <>
       <div className='flex flex-col overflow-hidden transition duration-300 transform rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl'>

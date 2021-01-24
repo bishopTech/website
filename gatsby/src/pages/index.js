@@ -166,6 +166,7 @@ export default function index ({data: {post, image, bgImage, downIcon, personalI
       {/* <!-- Contact Section --> */}
       <div className='py-32 bg-red-900'>
         <h1 className='text-4xl text-center text-white'>Get in touch!</h1>
+
       </div>
 
       {/* <FontAwesomeIcon icon={faVuejs} size={'6x'} className='text-gray-900 hover:text-green-500' onClick={scrollToTop} /> */}
