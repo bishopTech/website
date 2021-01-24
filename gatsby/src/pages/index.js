@@ -15,8 +15,7 @@ import WhatYoullLearn from '../components/home/WhatYoullLearn'
 import Hero from '../components/home/Hero'
 import Contact from '../components/home/Contact'
 
-export default function index ({data: {post, image, bgImage, downIcon, personalImage}}) {
-  console.log(personalImage)
+export default function index (props) {
   const scrollToTop = () => {
     scroll.scrollToTop()
   }
