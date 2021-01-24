@@ -12,7 +12,7 @@ import {Link as ScrollLink, animateScroll as scroll} from 'react-scroll'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faVuejs, faJsSquare, faNodeJs, faReact, faPython} from '@fortawesome/free-brands-svg-icons'
 import {faGem, faTint} from '@fortawesome/free-solid-svg-icons'
-import BlogCard from '../components/blog/BlogCard'
+
 export const query = graphql`
 query {
   image: file(relativePath: { eq: "images/bishopTechLogoIcon.png" }) {

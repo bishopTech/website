@@ -29,6 +29,8 @@ module.exports = {
   },
   variants: {
     extend: {
+      backgroundClip: ['hover'],
+      backgroundImage: ['hover'],
       transform: ['hover', 'focus'],
       display: ['group-hover'],
       rotate: ['active', 'group-hover']
