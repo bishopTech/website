@@ -25,17 +25,17 @@ export default function Footer () {
         <Img fluid={image.file.childImageSharp.fluid} className='py-8 px-28' imgStyle={{objectFit: 'contain'}} />
       </div>
 
-      <div className='mt-4 md:mt-0 md:w-1/3 flex justify-center items-center text-white space-x-12'>
-        <a href='https://www.youtube.com/channel/UCC0ivjsHB186_KKPJ0JlR_g' className='hover:text-red-600'>
+      <div className='mt-6 md:mt-0 md:w-1/3 flex justify-center items-center text-white space-x-12'>
+        <a href='https://www.youtube.com/channel/UCC0ivjsHB186_KKPJ0JlR_g' target='_blank' rel='noopener noreferrer' className='hover:text-red-600'>
           <FontAwesomeIcon icon={faYoutube} size={'6xl'} className='text-4xl' />
         </a>
-        <a href='https://www.instagram.com/bishop.tech/' className='text-white hover:bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 rounded-md py-0.5 px-1'>
+        <a href='https://www.instagram.com/bishop.tech/' target='_blank' rel='noopener noreferrer' className='text-white hover:bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 rounded-md py-0.5 px-1'>
           <FontAwesomeIcon icon={faInstagram} size={'6xl'} className='text-4xl' />
         </a>
-        <a href='https://twitter.com/bishoptech_' className='hover:text-blue-300'>
+        <a href='https://twitter.com/bishoptech_' target='_blank' rel='noopener noreferrer' className='hover:text-blue-300'>
           <FontAwesomeIcon icon={faTwitter} size={'6xl'} className='text-4xl' />
         </a>
-        <a href='https://github.com/bishopTech' className='hover:text-gray-600'>
+        <a href='https://github.com/bishopTech' target='_blank' rel='noopener noreferrer' className='hover:text-gray-600'>
           <FontAwesomeIcon icon={faGithub} size={'6xl'} className='text-4xl' />
         </a>
       </div>
