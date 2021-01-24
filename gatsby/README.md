@@ -1,7 +1,8 @@
 # Gatsby Site
 
 # TODO
-### Today goals:
+
+### Today goals
 
 - first time posts
 - Do Feature Posts section
@@ -13,7 +14,7 @@
 - Complete Nav
 - Back to top button
 - Responsive Nav
-    - The mobile nav is a bar on the bottom of the page with 3 options, Home about & blog
+  - The mobile nav is a bar on the bottom of the page with 3 options, Home about & blog
 - SEO
 - Favicon
 - add google analytics
@@ -27,20 +28,18 @@ Most Recent posts:
 Make the what you'll learn link to the tags of the technologies
 If this is your first time looking into the world of coding I suggest you start with (…)
 
-
-
 ## Dev Branch
 
 ### GO LIVE GOALS
 
-- [ ] Home Page
+- [x] Home Page
   - [x] Hero Section (Why should people care)
   - [x] Proof (Who am I and what i've done)
   - [x] Logo Cloud (technologies you'll learn)
   - [x] Featured Posts
-  - [ ] Have any questions?
+  - [x] Have any questions?
 - [x] Footer
-- [ ] Nav
+- [x] Nav
 - [x] About Page
 - [ ] Blog Cards + Pagination
 - [x] Blog Post Page
@@ -63,7 +62,6 @@ If this is your first time looking into the world of coding I suggest you start 
 - [ ] import dank mono font (in the font zip)
 - [ ] reading progress
 - [ ] Disqus
-
 
 ## Future
 
