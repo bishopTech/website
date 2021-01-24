@@ -33,6 +33,7 @@ module.exports = {
       backgroundImage: ['hover'],
       transform: ['hover', 'focus'],
       display: ['group-hover'],
+      scale: ['hover', 'active'],
       rotate: ['active', 'group-hover']
     }
   },
