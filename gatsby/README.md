@@ -37,9 +37,9 @@ If this is your first time looking into the world of coding I suggest you start 
   - [x] Hero Section (Why should people care)
   - [x] Proof (Who am I and what i've done)
   - [x] Logo Cloud (technologies you'll learn)
-  - [ ] Featured Posts
+  - [x] Featured Posts
   - [ ] Have any questions?
-- [ ] Footer
+- [x] Footer
 - [ ] Nav
 - [x] About Page
 - [ ] Blog Cards + Pagination
@@ -54,7 +54,7 @@ If this is your first time looking into the world of coding I suggest you start 
   - [x] logo file
 - [x] Add Gatsby image and access to src/assets images
 - [x] fix the loading pixelation on gatsby image
-- [ ] Configure Layout
+- [x] Configure Layout
 - [ ] Correct SEO file
 - [x] Install Tailwind CSS
 - [x] update to most recent gatsby version
