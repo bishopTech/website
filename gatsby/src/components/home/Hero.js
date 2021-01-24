@@ -2,7 +2,7 @@ import React from 'react'
 import BackgroundImage from 'gatsby-background-image'
 import Nav from '../layout/Nav'
 import Img from 'gatsby-image'
-import {Link as ScrollLink} from 'react-scroll'
+import {animateScroll as scroll, Link as ScrollLink} from 'react-scroll'
 import {graphql, useStaticQuery} from 'gatsby'
 
 function Hero (props) {
