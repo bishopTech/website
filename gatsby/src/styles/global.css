@@ -41,5 +41,9 @@ body {
   border:none;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
 
+.footerIcon {
+  height: 40px;
+  width: auto;
 }
