@@ -6,7 +6,7 @@ import {
   filterOutDocsPublishedInTheFuture
 } from '../lib/helpers'
 import GraphQLErrorList from '../components/sanity/graphql-error-list'
-import SEO from '../components/sanity/seo'
+import OldSEO from '../components/sanity/oldSEO'
 import Layout from '../components/layout/Layout'
 import BlogCard from '../components/blog/BlogCard'
 
@@ -101,7 +101,7 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <SEO
+      <OldSEO
         title={site.title}
         description={site.description}
         keywords={site.keywords}

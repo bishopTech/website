@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout/Layout'
 import Img from 'gatsby-image'
 import {graphql} from 'gatsby'
+import SEO from '../components/layout/SEO'
 
 export const query = graphql`
   query {
@@ -15,6 +16,7 @@ export default function about ({data: {image}}) {
   console.log(image)
   return (
     <Layout>
+      <SEO title='About' />
       <div className='bg-white overflow-hidden'>
         <div className='relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8'>
           <div className='hidden lg:block bg-white absolute top-0 bottom-0 left-3/4 w-screen' />

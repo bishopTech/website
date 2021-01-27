@@ -12,6 +12,7 @@ import {Link as ScrollLink, animateScroll as scroll} from 'react-scroll'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faVuejs, faJsSquare, faNodeJs, faReact, faPython} from '@fortawesome/free-brands-svg-icons'
 import {faGem, faTint} from '@fortawesome/free-solid-svg-icons'
+import SEO from '../components/layout/SEO'
 
 export const query = graphql`
 query {
@@ -62,7 +63,7 @@ export default function index ({data: {post, image, bgImage, downIcon, personalI
 
   return (
     <Layout transparent nav={false}>
-
+      <SEO title='Home Page' />
       {/* <!-- Hero Section --> */}
       <BackgroundImage Tag='div' className='min-h-screen absolute text-white' fluid={bgImage.childImageSharp.fixed}>
         <Nav transparent />

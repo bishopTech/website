@@ -1,7 +1,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import GraphQLErrorList from '../components/sanity/graphql-error-list'
-import SEO from '../components/sanity/seo'
+import OldSEO from '../components/sanity/oldSEO'
 import {toPlainText} from '../lib/helpers'
 import PortableText from '../components/sanity/portableText'
 import Img from 'gatsby-image'
@@ -47,8 +47,8 @@ const BlogPostTemplate = props => {
   const post = data && data.post
   return (
     <Layout>
-      {errors && <SEO title='GraphQL Error' />}
-      {post && <SEO title={post.title || 'Untitled'} description={toPlainText(post._rawExcerpt)} image={post.mainImage.asset.fluid} />}
+      {errors && <OldSEO title='GraphQL Error' />}
+      {post && <OldSEO title={post.title || 'Untitled'} description={toPlainText(post._rawExcerpt)} image={post.mainImage.asset.fluid} />}
 
       {errors && (
         <div>

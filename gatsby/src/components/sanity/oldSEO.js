@@ -5,7 +5,7 @@ import {StaticQuery, graphql} from 'gatsby'
 import {imageUrlFor} from '../../lib/image-url'
 import {buildImageObj} from '../../lib/helpers'
 
-function SEO ({description, lang, meta, keywords, title, image}) {
+function OldSEO ({description, lang, meta, keywords, title, image}) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -75,13 +75,13 @@ function SEO ({description, lang, meta, keywords, title, image}) {
   )
 }
 
-SEO.defaultProps = {
+OldSEO.defaultProps = {
   lang: 'en',
   meta: [],
   keywords: []
 }
 
-SEO.propTypes = {
+OldSEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
@@ -89,7 +89,7 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired
 }
 
-export default SEO
+export default OldSEO
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {

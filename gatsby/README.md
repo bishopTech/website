@@ -14,7 +14,7 @@
 - Back to top button
 - Responsive Nav
     - The mobile nav is a bar on the bottom of the page with 3 options, Home about & blog
-- SEO
+- OldSEO
 - Favicon
 - add google analytics
 
@@ -55,7 +55,7 @@ If this is your first time looking into the world of coding I suggest you start 
 - [x] Add Gatsby image and access to src/assets images
 - [x] fix the loading pixelation on gatsby image
 - [ ] Configure Layout
-- [ ] Correct SEO file
+- [ ] Correct OldSEO file
 - [x] Install Tailwind CSS
 - [x] update to most recent gatsby version
 - [x] add fontawesome

@@ -8,6 +8,12 @@ const clientConfig = require('./client-config')
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
+  siteMetadata: {
+    title: 'Bishop Tech',
+    siteUrl: 'https://www.bishop.tech',
+    description: 'Making Learning to Code more accessible for all!',
+    twitter: '@bishoptech_'
+  },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
