@@ -1,21 +1,12 @@
 # Gatsby Site
 
 # TODO
-### Today goals:
 
-- first time posts
-- Do Feature Posts section
-- do contact form on home page
-- start footer
+### Today goals
+
+
 - add in the new custom colors
 - fix blog squares
-- Do coming soon if missing posts
-- Complete Nav
-- Back to top button
-- Responsive Nav
-    - The mobile nav is a bar on the bottom of the page with 3 options, Home about & blog
-- OldSEO
-- Favicon
 - add google analytics
 
 under what you'll learn:
@@ -27,35 +18,34 @@ Most Recent posts:
 Make the what you'll learn link to the tags of the technologies
 If this is your first time looking into the world of coding I suggest you start with (…)
 
-
-
 ## Dev Branch
 
 ### GO LIVE GOALS
 
-- [ ] Home Page
+- [x] Home Page
   - [x] Hero Section (Why should people care)
   - [x] Proof (Who am I and what i've done)
   - [x] Logo Cloud (technologies you'll learn)
-  - [ ] Featured Posts
-  - [ ] Have any questions?
-- [ ] Footer
-- [ ] Nav
+  - [x] Featured Posts
+  - [x] Have any questions?
+- [x] Footer
+- [x] Nav
 - [x] About Page
 - [ ] Blog Cards + Pagination
 - [x] Blog Post Page
 - [ ] Replace cursor with mouse icon
+- [ ] SEO
 
 ## Tinker Branch
 
-- [ ] Add static assets
-  - [ ] favicon ico
-  - [ ] favicon svg
+- [x] Add static assets
+  - [x] favicon ico
+  - [x] favicon svg
   - [x] logo file
 - [x] Add Gatsby image and access to src/assets images
 - [x] fix the loading pixelation on gatsby image
-- [ ] Configure Layout
-- [ ] Correct OldSEO file
+- [x] Configure Layout
+- [x] Correct SEO file
 - [x] Install Tailwind CSS
 - [x] update to most recent gatsby version
 - [x] add fontawesome
@@ -63,7 +53,6 @@ If this is your first time looking into the world of coding I suggest you start 
 - [ ] import dank mono font (in the font zip)
 - [ ] reading progress
 - [ ] Disqus
-
 
 ## Future
 

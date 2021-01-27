@@ -6,9 +6,9 @@
   - [ ] Hire
   - [ ] Links
   - [ ] Resume
-  - [ ] Nav
-  - [ ] Footer
-  - [ ] Layout
+  - [x] Nav
+  - [x] Footer
+  - [x] Layout
 - [ ] Configure SEO
 - [ ] Paginate Items
 - [ ] Update Data on studio

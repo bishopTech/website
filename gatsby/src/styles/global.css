@@ -27,3 +27,23 @@ body {
   width: 100%;
   object-fit: contain;
 }
+
+
+/*textarea:focus, input:focus, textarea:active, input:active {*/
+/*  outline: none;*/
+/*  border: none;*/
+/*  -webkit-box-shadow: none;*/
+/*  box-shadow: none;*/
+/*}*/
+
+[type='text']:focus, [type='email']:focus, textarea:focus {
+  outline: none;
+  border:none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.footerIcon {
+  height: 40px;
+  width: auto;
+}
