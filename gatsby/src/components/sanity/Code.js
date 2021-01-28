@@ -16,6 +16,7 @@ export default ({node}) => {
         showLineNumbers
         showInlineNumbers
         wrapLines
+        wrapLongLines
         language={lang || 'text'}
         style={xonokai}
         codeTagProps={{style: {fontFamily: 'Source Code Pro'}}}

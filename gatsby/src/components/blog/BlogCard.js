@@ -18,8 +18,10 @@ export default function BlogCard ({post}) {
         </Link>
         <div className='flex flex-col justify-between flex-1 p-6 bg-white'>
           <div className='flex-1'>
-            <p className='text-sm font-medium text-blue-600 flex'>
-              {categories.map(category => <Category category={category} />) }
+            <p className='text-sm font-medium lg:text-xs'>
+              <div className='space-x-2 flex'>
+                {categories.map(category => <Category category={category} />) }
+              </div>
             </p>
             <Link to={getBlogUrl(publishedAt, slug)} className='block mt-2'>
               <h3 className='text-xl font-semibold text-gray-900'>

@@ -35,6 +35,8 @@ If this is your first time looking into the world of coding I suggest you start 
 - [x] Blog Post Page
 - [ ] Replace cursor with mouse icon
 - [ ] SEO
+- [ ] SWAP twitter with LinkedIn
+- [ ] Bold Mission statement (maybe do it as a quote)
 
 ## Tinker Branch
 
