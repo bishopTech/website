@@ -13,7 +13,7 @@ import siteSettings from './documents/siteSettings'
 import bodyPortableText from './objects/bodyPortableText'
 import bioPortableText from './objects/bioPortableText'
 import mainImage from './objects/mainImage'
-import code from './objects/code'
+import codeBlock from './objects/code'
 import codePen from './objects/codePen'
 import series from './documents/series'
 // Then we give our schema to the builder and provide the result to Sanity
@@ -32,7 +32,7 @@ export default createSchema({
     mainImage,
     bodyPortableText,
     bioPortableText,
-    code,
+    codeBlock,
     codePen
 
     // When added to this list, object types can be used as

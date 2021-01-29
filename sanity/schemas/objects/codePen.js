@@ -1,12 +1,4 @@
-import React from 'react'
 import {FaCodepen} from 'react-icons/all'
-
-function Preview ({value}) {
-  const {code} = value
-  return (
-    {code}
-  )
-}
 
 export default {
   name: 'codePen',

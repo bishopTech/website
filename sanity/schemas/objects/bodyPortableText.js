@@ -23,7 +23,14 @@ export default {
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
         // preference or highlighting by editors.
-        decorators: [{title: 'Strong', value: 'strong'}, {title: 'Emphasis', value: 'em'}],
+        decorators: [
+          {title: 'Strong', value: 'strong'},
+          {
+            title: 'Code',
+            value: 'code'
+          },
+          {title: 'Emphasis', value: 'em'}
+        ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
@@ -46,7 +53,7 @@ export default {
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     {
-      type: 'code'
+      type: 'codeBlock'
     },
     {
       type: 'codePen'

@@ -1,21 +1,7 @@
-import React from 'react'
 import {FaCode} from 'react-icons/fa'
 
-function Preview ({value}) {
-  const {fileName, lang} = value
-  return (
-    <div>
-      file: { fileName || 'none' } <br />
-      lang: { lang }
-      <p>
-        const hello = world
-      </p>
-    </div>
-  )
-}
-
 export default {
-  name: 'code',
+  name: 'codeBlock',
   type: 'object',
   title: 'Code Block',
   icon: FaCode,
@@ -63,6 +49,6 @@ export default {
         subtitle: lang
       }
     }
-    // component: Preview
+
   }
 }
