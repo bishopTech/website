@@ -19,7 +19,7 @@ export default ({node}) => {
         wrapLongLines
         language={lang || 'text'}
         style={xonokai}
-        codeTagProps={{style: {fontFamily: 'Source Code Pro'}}}
+        codeTagProps={{style: {fontFamily: 'Dank Mono'}}}
         customStyle={{borderRadius: '0.75rem'}}
         className='rounded-xl'
       >
