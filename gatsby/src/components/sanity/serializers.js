@@ -1,14 +1,17 @@
 import React from 'react'
 import Figure from './Figure'
-import CodeBlock from './CodeBlock'
+import Code from './Code'
 import Pen from './Pen'
+import Highlighted from './Highlighted'
 
 const serializers = {
   types: {
-    authorReference: ({node}) => <span>{node.author.name}</span>,
     mainImage: Figure,
-    codeBlock: CodeBlock,
+    code: Code,
     codePen: Pen
+  },
+  marks: {
+    highlight: Highlighted
   }
 }
 

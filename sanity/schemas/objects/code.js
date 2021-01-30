@@ -1,7 +1,7 @@
 import {FaCode} from 'react-icons/fa'
 
 export default {
-  name: 'codeBlock',
+  name: 'code',
   type: 'object',
   title: 'Code Block',
   icon: FaCode,

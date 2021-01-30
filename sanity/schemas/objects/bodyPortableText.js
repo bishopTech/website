@@ -1,3 +1,13 @@
+import React from 'react'
+
+const highlightIcon = () => (
+  <span style={{fontWeight: 'bold'}}>H</span>
+)
+
+const highlightRender = props => (
+  <span style={{backgroundColor: 'yellow'}}>{props.children}</span>
+)
+
 export default {
   name: 'bodyPortableText',
   type: 'array',
@@ -16,6 +26,7 @@ export default {
         {title: 'H2', value: 'h2'},
         {title: 'H3', value: 'h3'},
         {title: 'H4', value: 'h4'},
+
         {title: 'Quote', value: 'blockquote'}
       ],
       lists: [{title: 'Bullet', value: 'bullet'}, {title: 'Number', value: 'number'}],
@@ -25,11 +36,15 @@ export default {
         // preference or highlighting by editors.
         decorators: [
           {title: 'Strong', value: 'strong'},
+          {title: 'Emphasis', value: 'em'},
           {
-            title: 'Code',
-            value: 'code'
-          },
-          {title: 'Emphasis', value: 'em'}
+            title: 'Highlight',
+            value: 'highlight',
+            blockEditor: {
+              icon: highlightIcon,
+              render: highlightRender
+            }
+          }
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -53,7 +68,7 @@ export default {
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     {
-      type: 'codeBlock'
+      type: 'code'
     },
     {
       type: 'codePen'
