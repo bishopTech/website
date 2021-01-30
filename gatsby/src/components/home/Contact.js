@@ -6,7 +6,7 @@ function Contact (props) {
       <div className='pt-12 bg-darker-blue'>
         <h1 className='text-4xl text-center text-white'>Get in touch!</h1>
         <div className='shadow-xl mt-8 px-8 md:w-full md:flex md:justify-center md:items-center'>
-          <form name='contact' method='POST' data-netlify='true' netlify-honeypot='bot-field' className='md:w-3/4 lg:w-3/5 xl:w-1/2 pb-16' >
+          <form name='contact' method='post' data-netlify='true' netlify-honeypot='bot-field' className='md:w-3/4 lg:w-3/5 xl:w-1/2 pb-16' >
             <div className='hidden'>
               <label>Fill this out if you are a bot:</label>
               <input name='bot-field' />
