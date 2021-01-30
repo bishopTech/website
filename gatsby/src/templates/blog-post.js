@@ -1,5 +1,5 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import {graphql, useStaticQuery} from 'gatsby'
 import GraphQLErrorList from '../components/sanity/graphql-error-list'
 import OldSEO from '../components/sanity/oldSEO'
 import {toPlainText} from '../lib/helpers'
@@ -7,6 +7,7 @@ import PortableText from '../components/sanity/portableText'
 import Img from 'gatsby-image'
 import Layout from '../components/layout/Layout'
 import BackgroundImage from 'gatsby-background-image'
+import {Disqus, CommentCount} from 'gatsby-plugin-disqus'
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
@@ -45,6 +46,13 @@ export const query = graphql`
 const BlogPostTemplate = props => {
   const {data, errors} = props
   const post = data && data.post
+
+  let disqusConfig = {
+    url: `${'https://www.bishop.tech' + location.pathname}`,
+    identifier: post.id,
+    title: post.title
+  }
+  console.log(disqusConfig)
   return (
     <Layout>
       {errors && <OldSEO title='GraphQL Error' />}
@@ -95,7 +103,10 @@ const BlogPostTemplate = props => {
           </div>
         </div>
       </div>
-
+      <div className='px-8 lg:px-36 mb-8 '>
+        {/* <CommentCount config={disqusConfig} placeholder={'...'} /> */}
+        <Disqus config={disqusConfig} />
+      </div>
     </Layout>
   )
 }
