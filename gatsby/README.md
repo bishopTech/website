@@ -34,7 +34,7 @@ If this is your first time looking into the world of coding I suggest you start 
 - [ ] Blog Cards + Pagination
 - [x] Blog Post Page
 - [ ] Replace cursor with mouse icon
-- [ ] SEO
+- [x] SEO
 - [ ] SWAP twitter with LinkedIn
 - [ ] Bold Mission statement (maybe do it as a quote)
 
@@ -52,7 +52,7 @@ If this is your first time looking into the world of coding I suggest you start 
 - [x] update to most recent gatsby version
 - [x] add fontawesome
 - [x] import source code pro font
-- [ ] import dank mono font (in the font zip)
+- [x] import dank mono font (in the font zip)
 - [ ] reading progress
 - [ ] Disqus
 
