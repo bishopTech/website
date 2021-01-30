@@ -33,7 +33,7 @@ function Contact (props) {
               />
             </div>
 
-            <div data-netlify-captcha />
+            {/* <div data-netlify-captcha /> */}
 
             <button type='submit' className='block w-full rounded bg-light-blue py-3 text-white font-bold shadow transform duration-300 hover:scale-105'>
               Submit
