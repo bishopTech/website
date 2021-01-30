@@ -10,6 +10,7 @@ function Contact (props) {
             <div className='hidden'>
               <label>Fill this out if you are a bot:</label>
               <input name='bot-field' />
+              <input type='hidden' name='form-name' value='contact' />
             </div>
             <div className='flex items-center bg-dark-blue rounded-t-lg'>
               <label htmlFor='name' className='w-20 text-right mr-8 text-gray-200'>Name</label>
