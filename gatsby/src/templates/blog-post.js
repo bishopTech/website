@@ -2,7 +2,7 @@ import React from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
 import GraphQLErrorList from '../components/sanity/graphql-error-list'
 import OldSEO from '../components/sanity/oldSEO'
-import {toPlainText} from '../lib/helpers'
+import {getBlogUrl, toPlainText} from '../lib/helpers'
 import PortableText from '../components/sanity/portableText'
 import Img from 'gatsby-image'
 import Layout from '../components/layout/Layout'
@@ -48,7 +48,7 @@ const BlogPostTemplate = props => {
   const post = data && data.post
 
   let disqusConfig = {
-    url: `${'https://www.bishop.tech' + location.pathname}`,
+    url: `${'https://www.bishop.tech' + getBlogUrl(post.publishedAt, post.slug)}`,
     identifier: post.id,
     title: post.title
   }
