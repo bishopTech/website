@@ -101,9 +101,19 @@ const BlogPostTemplate = props => {
           <div className='mx-auto mt-6 prose prose-lg text-gray-500 prose-indigo' >
             <PortableText blocks={post._rawBody} />
           </div>
+
+          {/* <div className='mt-12 flex flex-col justify-center items-center'> */}
+          {/*  <h1 className='text-2xl'>Author</h1> */}
+
+          {/*  <div className='shadow-lg rounded w-1/2'> */}
+          {/*    <h2>Chris Bishop</h2> */}
+          {/*  </div> */}
+
+          {/* </div> */}
         </div>
       </div>
       <div className='px-8 lg:px-36 mb-8 '>
+        <h3 className='text-center text-2xl mb-6'>Comments</h3>
         {/* <CommentCount config={disqusConfig} placeholder={'...'} /> */}
         <Disqus config={disqusConfig} />
       </div>
