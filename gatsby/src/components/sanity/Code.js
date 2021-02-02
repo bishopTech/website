@@ -39,7 +39,7 @@ export default ({node}) => {
   if (fileName) {
     title = (
       <>
-        <FontAwesomeIcon icon={icon} size={'6xl'} className={`text-3xl mr-3 ${color}`} />
+        <FontAwesomeIcon icon={icon} size={'6xl'} className={`text-2xl mr-3 ${color}`} />
         {fileName}
       </>
     )
@@ -53,7 +53,7 @@ export default ({node}) => {
 
   return (
     <div className='rounded-xl' style={{background: 'rgb(42, 42, 42) none repeat scroll 0% 0%'}}>
-      <div className='flex items-center px-6 pt-3 pb-0 mb-0 text-xl text-white'>
+      <div className='flex items-center px-6 pt-3 pb-0 mb-0 text-lg text-white'>
         {title}
       </div>
 
