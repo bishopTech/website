@@ -1,13 +1,13 @@
 import React from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
 import GraphQLErrorList from '../components/sanity/graphql-error-list'
-import OldSEO from '../components/sanity/oldSEO'
 import {getBlogUrl, toPlainText} from '../lib/helpers'
 import PortableText from '../components/sanity/portableText'
 import Img from 'gatsby-image'
 import Layout from '../components/layout/Layout'
 import BackgroundImage from 'gatsby-background-image'
 import {Disqus, CommentCount} from 'gatsby-plugin-disqus'
+import SEO from '../components/layout/SEO'
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
@@ -55,8 +55,8 @@ const BlogPostTemplate = props => {
   console.log(disqusConfig)
   return (
     <Layout>
-      {errors && <OldSEO title='GraphQL Error' />}
-      {post && <OldSEO title={post.title || 'Untitled'} description={toPlainText(post._rawExcerpt)} image={post.mainImage.asset.fluid} />}
+      {errors && <SEO title='GraphQL Error' />}
+      {post && <SEO title={post.title || 'Untitled'} description={toPlainText(post._rawExcerpt)} image={post.mainImage.asset.fluid} />}
 
       {errors && (
         <div>
