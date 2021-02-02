@@ -9,12 +9,13 @@
 /* White: #F0F7FE */
 
 @import "./dmvendor.css";
-
+/*@import url("cursor.svg");*/
 
 
 body {
   font-family: "Source Code Pro", monospace;
   /*font-family: 'Dank Mono' monospace;*/
+  cursor: url("/cursor.svg"), auto;
 }
 
 .gatsby-image-wrapper img[src*="base64,"] {
@@ -32,6 +33,7 @@ body {
   width: 100%;
   object-fit: contain;
 }
+
 
 
 /*textarea:focus, input:focus, textarea:active, input:active {*/
