@@ -23,7 +23,7 @@ interface SanityDocument {
 
 union SanityAuthorReferenceOrSpan = SanityAuthorReference | SanitySpan
 
-union SanityBlockOrMainImage = SanityBlock | SanityMainImage
+union SanityBlockOrCodeOrMainImage = SanityBlock | SanityCode | SanityMainImage
 
 type Directory implements Node {
   absolutePath: String!
@@ -706,6 +706,14 @@ type SanityCategoryGroupConnection {
   totalCount: Int!
 }
 
+type SanityCode {
+  _key: String
+  _type: String
+  code: String
+  fileName: String
+  lang: String
+}
+
 type SanityFile {
   _key: String
   _type: String
@@ -1319,15 +1327,19 @@ type SitePluginPluginOptions {
   path: String
   pathCheck: Boolean
   projectId: String
+  shortname: String
   specialChars: String
   stripMetadata: Boolean
   token: String
+  trackingIds: [String]
   watchMode: Boolean
 }
 
 type SiteSiteMetadata {
   description: String
+  siteUrl: String
   title: String
+  twitter: String
 }
 
 enum DirectoryFieldsEnum {
@@ -3067,7 +3079,9 @@ enum SiteFieldsEnum {
   polyfill
   port
   siteMetadata___description
+  siteMetadata___siteUrl
   siteMetadata___title
+  siteMetadata___twitter
 }
 
 enum SitePageFieldsEnum {
@@ -3237,9 +3251,11 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___path
   pluginCreator___pluginOptions___pathCheck
   pluginCreator___pluginOptions___projectId
+  pluginCreator___pluginOptions___shortname
   pluginCreator___pluginOptions___specialChars
   pluginCreator___pluginOptions___stripMetadata
   pluginCreator___pluginOptions___token
+  pluginCreator___pluginOptions___trackingIds
   pluginCreator___pluginOptions___watchMode
   pluginCreator___resolve
   pluginCreator___ssrAPIs
@@ -3366,9 +3382,11 @@ enum SitePluginFieldsEnum {
   pluginOptions___path
   pluginOptions___pathCheck
   pluginOptions___projectId
+  pluginOptions___shortname
   pluginOptions___specialChars
   pluginOptions___stripMetadata
   pluginOptions___token
+  pluginOptions___trackingIds
   pluginOptions___watchMode
   resolve
   ssrAPIs
@@ -4096,9 +4114,11 @@ input SitePluginPluginOptionsFilterInput {
   path: StringQueryOperatorInput
   pathCheck: BooleanQueryOperatorInput
   projectId: StringQueryOperatorInput
+  shortname: StringQueryOperatorInput
   specialChars: StringQueryOperatorInput
   stripMetadata: BooleanQueryOperatorInput
   token: StringQueryOperatorInput
+  trackingIds: StringQueryOperatorInput
   watchMode: BooleanQueryOperatorInput
 }
 
@@ -4109,7 +4129,9 @@ input SitePluginSortInput {
 
 input SiteSiteMetadataFilterInput {
   description: StringQueryOperatorInput
+  siteUrl: StringQueryOperatorInput
   title: StringQueryOperatorInput
+  twitter: StringQueryOperatorInput
 }
 
 input SiteSortInput {

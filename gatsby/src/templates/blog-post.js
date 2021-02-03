@@ -8,6 +8,7 @@ import Layout from '../components/layout/Layout'
 import BackgroundImage from 'gatsby-background-image'
 import {Disqus, CommentCount} from 'gatsby-plugin-disqus'
 import SEO from '../components/layout/SEO'
+import Category from '../components/blog/Category'
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
@@ -46,6 +47,7 @@ export const query = graphql`
 const BlogPostTemplate = props => {
   const {data, errors} = props
   const post = data && data.post
+  const categories = post.categories
 
   let disqusConfig = {
     url: `${'https://www.bishop.tech' + getBlogUrl(post.publishedAt, post.slug)}`,
@@ -90,7 +92,11 @@ const BlogPostTemplate = props => {
         <div className='relative px-4 sm:px-6 lg:px-8'>
           <div className='mx-auto text-lg max-w-prose'>
             <h1>
-              <span className='block text-base font-semibold tracking-wide text-center text-indigo-600 uppercase'>Tag</span>
+              {/* <span className='block text-base font-semibold tracking-wide text-center text-indigo-600 uppercase'>Tag</span> */}
+              <h4 className='text-lg text-center text-dark-blue mb-3'>Series Name Here </h4>
+              <div className='space-x-2 flex text-sm font-medium lg:text-xs justify-center mb-8'>
+                {categories.map(category => <Category category={category} />) }
+              </div>
               <span className='block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl'>{post.title}</span>
             </h1>
             <div className='flex justify-center'>

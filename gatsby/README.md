@@ -14,6 +14,10 @@
 - [ ] Make first Post
 - [ ] SEO on Blog List and Blog Pages
 - [ ] Add Brand Colors
+- [ ] Filter posts on tags (blog page)
+- [ ] Create a Tags page
+- [ ] Create a Series listing page
+
 
 
 ## Future
