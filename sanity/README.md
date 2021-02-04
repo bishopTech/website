@@ -19,10 +19,15 @@
 - [ ] set up series
 - [ ] set up links page data
 
+# How to update the GraphQL with changes
 
-----
+```bash
+sanity graphql deploy
+```
 
-# For Tips add this to the bottom of the sanity.json:
+---
+
+# For Tips add this to the bottom of the sanity.json
 
 ```json
 

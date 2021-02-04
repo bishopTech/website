@@ -1,4 +1,4 @@
-import {FaCodepen} from 'react-icons/all'
+import {FaCodepen} from 'react-icons/fa'
 
 export default {
   name: 'codePen',
