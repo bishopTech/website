@@ -9,6 +9,7 @@ import BackgroundImage from 'gatsby-background-image'
 import {Disqus, CommentCount} from 'gatsby-plugin-disqus'
 import SEO from '../components/layout/SEO'
 import Category from '../components/blog/Category'
+import AuthorCard from '../components/blog/AuthorCard'
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
@@ -93,8 +94,8 @@ const BlogPostTemplate = props => {
           <div className='mx-auto text-lg max-w-prose'>
             <h1>
               {/* <span className='block text-base font-semibold tracking-wide text-center text-indigo-600 uppercase'>Tag</span> */}
-              <h4 className='text-lg text-center text-dark-blue mb-3'>Series Name Here </h4>
-              <div className='space-x-2 flex text-sm font-medium lg:text-xs justify-center mb-8'>
+              <h4 className='mb-3 text-lg text-center text-dark-blue'>Series Name Here </h4>
+              <div className='flex justify-center mb-8 space-x-2 text-sm font-medium lg:text-xs'>
                 {categories.map(category => <Category category={category} />) }
               </div>
               <span className='block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl'>{post.title}</span>
@@ -108,18 +109,20 @@ const BlogPostTemplate = props => {
             <PortableText blocks={post._rawBody} />
           </div>
 
-          {/* <div className='mt-12 flex flex-col justify-center items-center'> */}
+          <AuthorCard />
+
+          {/* <div className='flex flex-col items-center justify-center mt-12'> */}
           {/*  <h1 className='text-2xl'>Author</h1> */}
 
-          {/*  <div className='shadow-lg rounded w-1/2'> */}
+          {/*  <div className='w-1/2 rounded shadow-lg'> */}
           {/*    <h2>Chris Bishop</h2> */}
           {/*  </div> */}
 
           {/* </div> */}
         </div>
       </div>
-      <div className='px-8 lg:px-36 mb-8 '>
-        <h3 className='text-center text-2xl mb-6'>Comments</h3>
+      <div className='px-8 mb-8 lg:px-36 '>
+        <h3 className='mb-6 text-2xl text-center'>Comments</h3>
         {/* <CommentCount config={disqusConfig} placeholder={'...'} /> */}
         <Disqus config={disqusConfig} />
       </div>
