@@ -1,13 +1,7 @@
 import React from 'react'
-import Img from 'gatsby-image'
-import BackgroundImage from 'gatsby-background-image'
-import {graphql, Link} from 'gatsby'
 
 import '../styles/global.css'
 import Layout from '../components/layout/Layout'
-import Nav from '../components/layout/Nav'
-
-import {Link as ScrollLink, animateScroll as scroll} from 'react-scroll'
 
 import WhereToStart from '../components/home/WhereToStart'
 import About from '../components/home/About'
@@ -17,10 +11,6 @@ import Contact from '../components/home/Contact'
 import SEO from '../components/layout/SEO'
 
 export default function index (props) {
-  const scrollToTop = () => {
-    scroll.scrollToTop()
-  }
-
   return (
     <Layout transparent nav={false}>
       <SEO title='Home Page' />

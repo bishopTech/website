@@ -1,5 +1,4 @@
 import React from 'react'
-import Img from 'gatsby-image'
 import {graphql, useStaticQuery} from 'gatsby'
 
 export default function AuthorCard (props) {
@@ -52,28 +51,28 @@ export default function AuthorCard (props) {
           <div className='flex flex-col space-y-3'>
             <a href='https://www.youtube.com/channel/UCC0ivjsHB186_KKPJ0JlR_g' target='_blank' rel='noopener noreferrer'
               className='flex items-center transition duration-300 transform hover:scale-110'>
-              <img src={youtube.publicURL} alt='Pixelated Youtube' className='' width={20} height={20} />
+              <img src={youtube.publicURL} alt='Pixelated Youtube logo' className='' width={20} height={20} />
               <h4 className='ml-2'>Youtube</h4>
             </a>
             <a href='https://www.instagram.com/bishop.tech/' target='_blank' rel='noopener noreferrer'
               className='flex items-center transition duration-300 transform hover:scale-110'>
-              <img src={instagram.publicURL} alt='Pixelated Youtube' className='' height={20} width={20} />
+              <img src={instagram.publicURL} alt='Pixelated Instagram logo' className='' height={20} width={20} />
               <h4 className='ml-2'>Instagram</h4>
             </a>
             <a href='https://twitter.com/bishoptech_' target='_blank' rel='noopener noreferrer'
               className='flex items-center transition duration-300 transform hover:scale-110'>
-              <img src={twitter.publicURL} alt='Pixelated Youtube' className='' height={20} width={20} />
+              <img src={twitter.publicURL} alt='Pixelated Twitter logo' className='' height={20} width={20} />
               <h4 className='ml-2'>Twitter</h4>
             </a>
             <a href='https://github.com/bishopTech' target='_blank' rel='noopener noreferrer'
               className='flex items-center transition duration-300 transform hover:scale-110'>
-              <img src={github.publicURL} alt='Pixelated Youtube' className='' height={20} width={20} />
+              <img src={github.publicURL} alt='Pixelated Github logo' className='' height={20} width={20} />
               <h4 className='ml-2'>Github</h4>
             </a>
             <a href='https://www.buymeacoffee.com/bishoptech' target='_blank' rel='noopener noreferrer'
               className='flex items-center transition duration-300 transform hover:scale-110'>
-              <img src={coffee.publicURL} alt='Pixelated Youtube' className='' height={20} width={20} />
-              <h4 className='ml-2 leading-3 tracking-tighter'>Buy me a Coffee</h4>
+              <img src={coffee.publicURL} alt='Pixelated Buy me a coffee logo' className='' height={20} width={20} />
+              <h4 className='ml-2 tracking-tighter'>Buy me a Coffee</h4>
             </a>
           </div>
         </div>

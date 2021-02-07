@@ -1,8 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import {graphql, useStaticQuery} from 'gatsby'
-import {faGithub, faInstagram, faTwitter, faYoutube} from '@fortawesome/free-brands-svg-icons'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 export default function Footer () {
   const {image, youtube, instagram, twitter, github, coffee} = useStaticQuery(graphql`
@@ -48,23 +46,23 @@ export default function Footer () {
       <div className='flex items-center justify-center mt-6 space-x-12 text-white md:mt-0 md:w-2/3 lg:w-1/3'>
         <a href='https://www.youtube.com/channel/UCC0ivjsHB186_KKPJ0JlR_g' target='_blank' rel='noopener noreferrer'
           className='transition duration-300 transform hover:scale-110'>
-          <img src={youtube.publicURL} alt='Pixelated Youtube' className='footerIcon' width={40} height={40} />
+          <img src={youtube.publicURL} alt='Pixelated Youtube Logo' className='footerIcon' width={40} height={40} />
         </a>
         <a href='https://www.instagram.com/bishop.tech/' target='_blank' rel='noopener noreferrer'
           className='transition duration-300 transform hover:scale-110'>
-          <img src={instagram.publicURL} alt='Pixelated Youtube' className='footerIcon' height={40} width={40} />
+          <img src={instagram.publicURL} alt='Pixelated Instagram Logo' className='footerIcon' height={40} width={40} />
         </a>
         <a href='https://twitter.com/bishoptech_' target='_blank' rel='noopener noreferrer'
           className='transition duration-300 transform hover:scale-110'>
-          <img src={twitter.publicURL} alt='Pixelated Youtube' className='footerIcon' height={40} width={40} />
+          <img src={twitter.publicURL} alt='Pixelated Twitter Logo' className='footerIcon' height={40} width={40} />
         </a>
         <a href='https://github.com/bishopTech' target='_blank' rel='noopener noreferrer'
           className='transition duration-300 transform hover:scale-110'>
-          <img src={github.publicURL} alt='Pixelated Youtube' className='footerIcon' height={40} width={40} />
+          <img src={github.publicURL} alt='Pixelated Github Logo' className='footerIcon' height={40} width={40} />
         </a>
         <a href='https://www.buymeacoffee.com/bishoptech' target='_blank' rel='noopener noreferrer'
           className='transition duration-300 transform hover:scale-110'>
-          <img src={coffee.publicURL} alt='Pixelated Youtube' className='footerIcon' height={35} width={30} />
+          <img src={coffee.publicURL} alt='Pixelated Buy me a Coffee Logo' className='footerIcon' height={35} width={30} />
         </a>
       </div>
       <div className='block pb-4 mt-6 md:pb-0 md:mt-0 md:w-1/3 md:hidden lg:block'>
