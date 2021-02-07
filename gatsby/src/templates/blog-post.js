@@ -78,10 +78,12 @@ const BlogPostTemplate = props => {
   }
   console.log(disqusConfig)
 
+  console.log(post.mainImage.asset.fixed)
+
   return (
     <Layout>
       {errors && <SEO title='GraphQL Error' />}
-      {post && <SEO title={post.title || 'Untitled'} description={toPlainText(post._rawExcerpt)} image={post.mainImage.asset.fixed} />}
+      {post && <SEO title={post.title || 'Untitled'} description={toPlainText(post._rawExcerpt)} image={post.mainImage.asset.fixed.src} />}
 
       {errors && (
         <div>
