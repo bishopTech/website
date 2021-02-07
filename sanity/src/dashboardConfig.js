@@ -14,7 +14,7 @@ export default {
                 {
                   buildHookId: '5fe87387d3fff98964fec252',
                   title: 'Sanity Studio',
-                  name: "bishopstudio",
+                  name: 'bishopstudio',
                   apiId: 'b2c28f4e-426f-45f8-b7d6-5607bf16c97c'
                 },
                 {
