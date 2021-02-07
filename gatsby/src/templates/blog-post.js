@@ -36,6 +36,9 @@ export const query = graphql`
         title
         id
       }
+      series {
+        title 
+      }
       slug {
         current
       }
@@ -49,13 +52,29 @@ const BlogPostTemplate = props => {
   const {data, errors} = props
   const post = data && data.post
   const categories = post.categories
+  const series = post.series
 
+  let seriesTitle
+  if (series[0]) {
+    seriesTitle = (
+      <>
+        <h4 className='mb-3 text-lg text-center text-dark-blue'>{series[0].title}</h4>
+      </>
+    )
+  } else {
+    seriesTitle = (
+      <>
+
+      </>
+    )
+  }
   let disqusConfig = {
     url: `${'https://www.bishop.tech' + getBlogUrl(post.publishedAt, post.slug)}`,
     identifier: post.id,
     title: post.title
   }
   console.log(disqusConfig)
+
   return (
     <Layout>
       {errors && <SEO title='GraphQL Error' />}
@@ -94,7 +113,8 @@ const BlogPostTemplate = props => {
           <div className='mx-auto text-lg max-w-prose'>
             <h1>
               {/* <span className='block text-base font-semibold tracking-wide text-center text-indigo-600 uppercase'>Tag</span> */}
-              <h4 className='mb-3 text-lg text-center text-dark-blue'>Series Name Here </h4>
+              {/* <h4 className='mb-3 text-lg text-center text-dark-blue'>{Series Name Here }</h4> */}
+              {seriesTitle}
               <div className='flex justify-center mb-8 space-x-2 text-sm font-medium lg:text-xs'>
                 {categories.map(category => <Category category={category} />) }
               </div>

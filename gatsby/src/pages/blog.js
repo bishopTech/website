@@ -64,6 +64,9 @@ export const query = graphql`
           slug {
             current
           }
+          series {
+            title
+          }
           categories {
             title
             id

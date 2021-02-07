@@ -5,9 +5,30 @@ import Img from 'gatsby-image'
 import Category from './Category'
 
 export default function BlogCard ({post}) {
-  const {excerpt, categories, title, mainImage, publishedAt, slug} = post
+  const {excerpt, categories, title, mainImage, publishedAt, slug, series} = post
   // console.log('excerpt ', excerpt)
-  // console.log('props: ', post)
+  console.log('props: ', series)
+  let seriesTitle
+
+  if (series[0]) {
+    seriesTitle = (
+      <>
+        <span aria-hidden='true'>
+          &middot;
+        </span>
+        <span>
+          {series[0].title}
+        </span>
+      </>
+    )
+  } else {
+    seriesTitle = (
+      <>
+
+      </>
+    )
+  }
+
   return (
     <>
       <div className='flex flex-col overflow-hidden transition duration-300 transform rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl'>
@@ -19,7 +40,7 @@ export default function BlogCard ({post}) {
         <div className='flex flex-col justify-between flex-1 p-6 bg-white'>
           <div className='flex-1'>
             <p className='text-sm font-medium lg:text-xs'>
-              <div className='space-x-2 flex'>
+              <div className='flex space-x-2'>
                 {categories.map(category => <Category category={category} />) }
               </div>
             </p>
@@ -49,12 +70,7 @@ export default function BlogCard ({post}) {
                 <time dateTime='2020-03-16'>
                   Jan 12, 2021
                 </time>
-                <span aria-hidden='true'>
-                  &middot;
-                </span>
-                <span>
-                  Series
-                </span>
+                {seriesTitle}
               </div>
             </div>
           </div>
