@@ -1,6 +1,5 @@
 import S from '@sanity/desk-tool/structure-builder'
-import {MdSettings,
-  MdPerson,
+import {
   MdDescription,
   MdLocalOffer,
   MdViewList
@@ -48,16 +47,6 @@ export default () =>
   S.list()
     .title('Content')
     .items([
-      S.listItem()
-        .title('Settings')
-        .icon(MdSettings)
-        .child(
-          S.editor()
-            .id('siteSettings')
-            .schemaType('siteSettings')
-            .documentId('siteSettings')
-        ),
-      S.divider(),
       S.listItem()
         .title('Blog posts')
         .icon(MdDescription)
