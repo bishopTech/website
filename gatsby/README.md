@@ -3,6 +3,7 @@
 # TODO
 
 - [ ] Add Brand Colors
+- [ ] Set up a Development DB
 - [ ] Resume Page
 - [ ] Hire Me Page
 - [ ] Link in bio page (Instagram)

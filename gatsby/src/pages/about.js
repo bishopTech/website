@@ -63,7 +63,7 @@ export default function about ({data: {image}}) {
                   Even more the access to affordable or free content to take you from knowing nothing to job ready is even more scarce.
                 </p>
                 <p>
-                  So as a recent grad from Ryerson Univeristy with my Computer Science undergrad in hand I decided I wanted to make it my mission to create a site to solve this problem! That is why I created Bishop Tech. I wanted to create a personal blog to track my journey in start of my career and along the way use this platform to give back and teach anyone interested the skills I've gained or lessons I've learned. I Again with the goal in mind of making learning to code and getting into the industry more accessible for anyone with an interest!
+                  So as a recent grad from Ryerson Univeristy with my Computer Science undergrad in hand I decided I wanted to make it my mission to create a site to solve this problem! That is why I created Bishop Tech. I wanted to create a personal blog to track my journey in start of my career and along the way use this platform to give back and teach anyone interested the skills I've gained or lessons I've learned. It again with the goal in mind of making learning to code and getting into the industry more accessible for anyone with an interest!
                 </p>
                 <p>
                   Again with the goal in mind of making learning to code and getting into the industry more accessible for anyone with an interest!
