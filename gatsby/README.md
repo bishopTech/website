@@ -2,25 +2,20 @@
 
 # TODO
 
-### GO LIVE GOALS
-
-- [ ] Fix Tags and Series for Blog list and how pages
-- [ ] Blog Cards + Pagination
+- [ ] Add Brand Colors
+- [ ] Resume Page
+- [ ] Hire Me Page
+- [ ] Link in bio page (Instagram)
+- [ ] Category Page
+- [ ] Series Page
+- [ ] Paginate Posts
+  - [ ] Main
+  - [ ] Tag
+  - [ ] Series
+- [ ] Add Search to website
 - [ ] Replace cursor with mouse icon
 - [ ] SWAP twitter with LinkedIn
-- [ ] Bold Mission statement (maybe do it as a quote)
 - [ ] reading progress (page height)
-- [ ] Review Backend
-- [ ] Make first Post
-- [ ] SEO on Blog List and Blog Pages
-- [ ] Add Brand Colors
-- [ ] Filter posts on tags (blog page)
-- [ ] Create a Tags page
-- [ ] Create a Series listing page
-
-
-
-## Future
-
-- [ ] Resume
-- [ ] Hire Me
+- [ ] New Blog Cards:
+  - [ ] <http://xpanthersolutions.com/html/blogen/index.html>
+  - [ ] <https://davidparks.dev/blog/>
