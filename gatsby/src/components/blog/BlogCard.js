@@ -13,18 +13,41 @@ export default function BlogCard ({post}) {
   if (series[0]) {
     seriesTitle = (
       <>
-        <span aria-hidden='true'>
-          &middot;
-        </span>
-        <span>
-          {series[0].title}
-        </span>
+        <div className='ml-3'>
+          <p className='space-x-1 text-sm font-medium text-gray-900'>
+            <a href='#' className='hover:underline'>
+              Chris Bishop
+            </a>
+            <span aria-hidden='true'>
+              &middot;
+            </span>
+            <time dateTime='2020-03-16'>
+              Jan 12, 2021
+            </time>
+          </p>
+          <div className='flex text-sm text-gray-500'>
+            <span>
+              {series[0].title}
+            </span>
+          </div>
+        </div>
       </>
     )
   } else {
     seriesTitle = (
       <>
-
+        <div className='ml-3'>
+          <p className='space-x-1 text-sm font-medium text-gray-900'>
+            <a href='#' className='hover:underline'>
+              Chris Bishop
+            </a>
+          </p>
+          <div className='flex text-sm text-gray-500'>
+            <time dateTime='2020-03-16'>
+              Jan 12, 2021
+            </time>
+          </div>
+        </div>
       </>
     )
   }
@@ -60,19 +83,7 @@ export default function BlogCard ({post}) {
                 <img className='w-10 h-10 rounded-full' src='https://www.chrisbishop.ca/images/bishop/small-personal.JPG' alt='' />
               </a>
             </div>
-            <div className='ml-3'>
-              <p className='text-sm font-medium text-gray-900'>
-                <a href='#' className='hover:underline'>
-                  Chris Bishop
-                </a>
-              </p>
-              <div className='flex space-x-1 text-sm text-gray-500'>
-                <time dateTime='2020-03-16'>
-                  Jan 12, 2021
-                </time>
-                {seriesTitle}
-              </div>
-            </div>
+            {seriesTitle}
           </div>
         </div>
       </div>
