@@ -2,7 +2,7 @@ import React from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
 
 export default function AuthorCard (props) {
-  const {personalImage, youtube, instagram, twitter, github, coffee} = useStaticQuery(graphql`
+  const {personalImage, youtube, instagram, linkedin, github, coffee} = useStaticQuery(graphql`
     query {
       personalImage: file(relativePath: { eq: "images/small-personal.JPG" }) {
         publicURL
@@ -22,7 +22,7 @@ export default function AuthorCard (props) {
         publicURL
       }
 
-      twitter: file(relativePath: { eq: "images/icons/BT - Social - TWT - LG.svg" }) {
+      linkedin: file(relativePath: { eq: "images/icons/BT - Social - LI - LG.svg" }) {
         publicURL
       }
 
@@ -59,10 +59,10 @@ export default function AuthorCard (props) {
               <img src={instagram.publicURL} alt='Pixelated Instagram logo' className='' height={20} width={20} />
               <h4 className='ml-2'>Instagram</h4>
             </a>
-            <a href='https://twitter.com/bishoptech_' target='_blank' rel='noopener noreferrer'
+            <a href='https://www.linkedin.com/in/bishoptech' target='_blank' rel='noopener noreferrer'
               className='flex items-center transition duration-300 transform hover:scale-110'>
-              <img src={twitter.publicURL} alt='Pixelated Twitter logo' className='' height={20} width={20} />
-              <h4 className='ml-2'>Twitter</h4>
+              <img src={linkedin.publicURL} alt='Pixelated LinkedIn logo' className='' height={20} width={20} />
+              <h4 className='ml-2'>LinkedIn</h4>
             </a>
             <a href='https://github.com/bishopTech' target='_blank' rel='noopener noreferrer'
               className='flex items-center transition duration-300 transform hover:scale-110'>
