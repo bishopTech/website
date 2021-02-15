@@ -3,7 +3,7 @@ import Img from 'gatsby-image'
 import {graphql, useStaticQuery} from 'gatsby'
 
 export default function Footer () {
-  const {image, youtube, instagram, twitter, linkedin, github, coffee} = useStaticQuery(graphql`
+  const {image, youtube, instagram, linkedin, github, coffee} = useStaticQuery(graphql`
     query {
       image: file(relativePath: {eq: "images/bishopTechFullLogo.png"}) {
         childImageSharp {
@@ -56,10 +56,6 @@ export default function Footer () {
           className='transition duration-300 transform hover:scale-110'>
           <img src={instagram.publicURL} alt='Pixelated Instagram Logo' className='footerIcon' height={40} width={40} />
         </a>
-        {/* <a href='https://twitter.com/bishoptech_' target='_blank' rel='noopener noreferrer'
-          className='transition duration-300 transform hover:scale-110'>
-          <img src={twitter.publicURL} alt='Pixelated Twitter Logo' className='footerIcon' height={40} width={40} />
-        </a> */}
         <a href='https://www.linkedin.com/in/bishoptech' target='_blank' rel='noopener noreferrer'
           className='transition duration-300 transform hover:scale-110'>
           <img src={linkedin.publicURL} alt='Pixelated LinkedIn Logo' className='footerIcon' height={40} width={40} />
