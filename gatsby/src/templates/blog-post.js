@@ -117,8 +117,6 @@ const BlogPostTemplate = props => {
         <div className='relative px-4 sm:px-6 lg:px-8'>
           <div className='mx-auto text-lg max-w-prose'>
             <h1>
-              {/* <span className='block text-base font-semibold tracking-wide text-center text-indigo-600 uppercase'>Tag</span> */}
-              {/* <h4 className='mb-3 text-lg text-center text-dark-blue'>{Series Name Here }</h4> */}
               {seriesTitle}
               <div className='flex justify-center mb-8 space-x-2 text-sm font-medium lg:text-xs'>
                 {categories.map(category => <Category category={category} />) }
@@ -135,15 +133,6 @@ const BlogPostTemplate = props => {
           </div>
 
           <AuthorCard />
-
-          {/* <div className='flex flex-col items-center justify-center mt-12'> */}
-          {/*  <h1 className='text-2xl'>Author</h1> */}
-
-          {/*  <div className='w-1/2 rounded shadow-lg'> */}
-          {/*    <h2>Chris Bishop</h2> */}
-          {/*  </div> */}
-
-          {/* </div> */}
         </div>
       </div>
       <div className='px-8 mb-8 lg:px-36 '>

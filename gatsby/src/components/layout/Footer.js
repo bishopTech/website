@@ -78,31 +78,3 @@ export default function Footer () {
     </footer>
   )
 }
-
-// Old Footer:
-
-// <footer className='justify-between bg-darkest-blue md:h-32 md:flex md:justify-center md:items-center lg:px-4'>
-//   <div className='flex items-center justify-center pt-4 md:pt-0 md:w-1/3'>
-//     <Img fluid={image.file.childImageSharp.fluid} className='py-8 px-28' imgStyle={{objectFit: 'contain'}} />
-//   </div>
-//
-//   <div className='flex items-center justify-center mt-6 space-x-12 text-white md:mt-0 md:w-1/3'>
-//     <a href='https://www.youtube.com/channel/UCC0ivjsHB186_KKPJ0JlR_g' target='_blank' rel='noopener noreferrer' className='hover:text-red-600'>
-//       <FontAwesomeIcon icon={faYoutube} size={'6xl'} className='text-4xl' />
-//     </a>
-//     <a href='https://www.instagram.com/bishop.tech/' target='_blank' rel='noopener noreferrer' className='text-white hover:bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 rounded-md py-0.5 px-1'>
-//       <FontAwesomeIcon icon={faInstagram} size={'6xl'} className='text-4xl' />
-//     </a>
-//     <a href='https://twitter.com/bishoptech_' target='_blank' rel='noopener noreferrer' className='hover:text-blue-300'>
-//       <FontAwesomeIcon icon={faTwitter} size={'6xl'} className='text-4xl' />
-//     </a>
-//     <a href='https://github.com/bishopTech' target='_blank' rel='noopener noreferrer' className='hover:text-gray-600'>
-//       <FontAwesomeIcon icon={faGithub} size={'6xl'} className='text-4xl' />
-//     </a>
-//   </div>
-//   <div className='pb-4 mt-4 md:pb-0 md:mt-0 md:w-1/3 '>
-//     <p className='text-base text-lg text-center text-white'>
-//       Crafted with ❤️ by Chris Bishop
-//     </p>
-//   </div>
-// </footer>
