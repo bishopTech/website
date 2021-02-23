@@ -12,7 +12,6 @@ export const query = graphql`
 `
 
 export default function about ({data: {image}}) {
-  console.log(image)
   return (
     <Layout>
       <SEO title='About' />
