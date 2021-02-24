@@ -4,7 +4,7 @@ import {xonokai} from 'react-syntax-highlighter/src/styles/prism'
 
 // Font Awesome
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faJsSquare, faReact, faVuejs} from '@fortawesome/free-brands-svg-icons'
+import {faJsSquare, faGoogle} from '@fortawesome/free-brands-svg-icons'
 import {faGem, faTint, faCode} from '@fortawesome/free-solid-svg-icons'
 
 export default ({node}) => {
@@ -28,7 +28,10 @@ export default ({node}) => {
       icon = faGem
       color = 'text-red-500'
       break
-
+    case 'go':
+      icon = faGoogle
+      color = 'text-blue-200'
+      break
     default:
       icon = faCode
       color = 'text-white'

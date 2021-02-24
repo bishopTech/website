@@ -17,6 +17,7 @@ export default {
       title: 'Language of Code',
       options: {
         list: [
+          {title: 'Go Lang', value: 'go'},
           {title: 'Javascript', value: 'javascript'},
           {title: 'Vue', value: 'vue'},
           {title: 'React', value: 'jsx'},
