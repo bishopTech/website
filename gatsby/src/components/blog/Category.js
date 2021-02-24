@@ -1,5 +1,5 @@
 import React from 'react'
-import {faJs, faVuejs, faReact, faNodeJs, faPython} from '@fortawesome/free-brands-svg-icons'
+import {faJs, faVuejs, faReact, faNodeJs, faPython, faGoogle} from '@fortawesome/free-brands-svg-icons'
 import {faGem, faTint, faTerminal, faBriefcase} from '@fortawesome/free-solid-svg-icons'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -47,6 +47,11 @@ function Category ({category}) {
     case 'Career Advice':
       icon = faBriefcase
       bg = 'bg-gray-900'
+      txtColor = 'text-white'
+      break
+    case 'Go':
+      icon = faGoogle
+      bg = 'bg-blue-400'
       txtColor = 'text-white'
       break
     default:
