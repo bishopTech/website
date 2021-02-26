@@ -20,3 +20,4 @@
 - [ ] New Blog Cards:
   - [ ] <http://xpanthersolutions.com/html/blogen/index.html>
   - [ ] <https://davidparks.dev/blog/>
+- [ ] Set up ghost blog with Tailwind
