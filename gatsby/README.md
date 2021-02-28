@@ -18,6 +18,18 @@
 - [ ] SWAP twitter with LinkedIn
 - [ ] reading progress (page height)
 - [ ] New Blog Cards:
+
   - [ ] <http://xpanthersolutions.com/html/blogen/index.html>
   - [ ] <https://davidparks.dev/blog/>
+
+# Ghost Blog TODO
+
+- [ ] Pick between Starter and Casper
 - [ ] Set up ghost blog with Tailwind
+- [ ] Set up home page
+- [ ] Set up Nav
+- [ ] Add and test syntax highlighting
+  - [ ] look at prism if i can set line numbers and highlight lines
+- [ ] create tag-pages
+
+-
