@@ -28,8 +28,15 @@
 - [x] Set up ghost blog with Tailwind
 - [ ] Set up home page
 - [ ] Set up Nav
-- [ ] Add and test syntax highlighting
+- [ ] Set up Routing.YAML
+- [ ] Set up Prism for syntax highlighting
   - [ ] look at prism if i can set line numbers and highlight lines
-- [ ] create tag-pages
+- [ ] create series page
+- [ ] create series post listing pages
+- [ ] add my fonts to the site 
+  - [ ] Source Code Pro
+  - [ ] Dank Mono
+- [ ] Redo all pages styling with Tailwind
+- [ ] 
 
 -
