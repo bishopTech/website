@@ -24,8 +24,8 @@
 
 # Ghost Blog TODO
 
-- [ ] Pick between Starter and Casper
-- [ ] Set up ghost blog with Tailwind
+- [x] Pick between Starter and Casper
+- [x] Set up ghost blog with Tailwind
 - [ ] Set up home page
 - [ ] Set up Nav
 - [ ] Add and test syntax highlighting
