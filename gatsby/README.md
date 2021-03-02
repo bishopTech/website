@@ -29,14 +29,14 @@
 - [ ] Set up home page
 - [ ] Set up Nav
 - [ ] Set up Routing.YAML
-- [ ] Set up Prism for syntax highlighting
+- [ ] Set up Prism for syntax highlighting (started)
   - [ ] look at prism if i can set line numbers and highlight lines
 - [ ] create series page
 - [ ] create series post listing pages
-- [ ] add my fonts to the site 
+- [ ] add my fonts to the site
   - [ ] Source Code Pro
   - [ ] Dank Mono
 - [ ] Redo all pages styling with Tailwind
-- [ ] 
+- [ ]
 
 -
