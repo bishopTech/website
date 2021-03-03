@@ -26,6 +26,7 @@
 
 - [x] Pick between Starter and Casper
 - [x] Set up ghost blog with Tailwind
+- [x] Decided on image hosting
 - [ ] Set up home page
 - [ ] Set up Nav
 - [ ] Set up Routing.YAML
