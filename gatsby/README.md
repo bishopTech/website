@@ -29,9 +29,7 @@
 - [x] Decided on image hosting
 - [x] add ssh
 - [x] Cleared out all code
-- [ ] Set up blog for starting to write (doesnt matter about design):
-  - [ ] Set up Prism for syntax highlighting (started)
-  - [ ] look at prism if i can set line numbers and highlight lines
+- [ ] Set up highlight.js for syntax highlighting
 - [ ] Set up home page
 - [ ] Set up Nav
 - [ ] Set up Routing.YAML
