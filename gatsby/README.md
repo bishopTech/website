@@ -39,3 +39,7 @@
   - [ ] Source Code Pro
   - [ ] Dank Mono
 - [ ] Redo all pages styling with Tailwind
+
+# Work on Go Lang
+
+- [x] March 9th 2021
