@@ -39,6 +39,3 @@
   - [ ] Source Code Pro
   - [ ] Dank Mono
 - [ ] Redo all pages styling with Tailwind
-- [ ]
-
--
