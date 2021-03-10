@@ -43,3 +43,4 @@
 # Work on Go Lang
 
 - [x] March 9th 2021
+- [x] March 10th 2021
