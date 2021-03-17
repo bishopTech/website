@@ -45,4 +45,8 @@
 - [x] March 9th 2021
 - [x] March 10th 2021
 - [x] March 11th 2021
-- [ ] March 12th 2021
+- [x] March 12th 2021
+- [x] March 13th 2021
+- [x] March 14th 2021
+- [x] March 15th 2021
+- [x] March 16th 2021
